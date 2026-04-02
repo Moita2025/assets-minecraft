@@ -1,0 +1,5 @@
+INPUT_DIRECTORY = ""
+
+ANALYSIS_PATH = ""
+MERGED_JSON_FILE = "f{ANALYSIS_PATH}/recipes_original.json"
+

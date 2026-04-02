@@ -2,12 +2,12 @@ import json
 from collections import Counter
 from pathlib import Path
 
-analysis_path = ""
+from configs import MERGED_JSON_FILE
 
 def get_original_recipes():
 
     # 指定路径
-    file_path = Path(f"{analysis_path}/recipes_original.json")
+    file_path = Path(MERGED_JSON_FILE)
 
     # 读取 JSON 文件
     with open(file_path, "r", encoding="utf-8") as f:

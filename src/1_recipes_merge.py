@@ -1,8 +1,7 @@
 import os
 import json
 
-input_directory = ""
-output_json_file = "recipes_original.json"
+from configs import INPUT_DIRECTORY, MERGED_JSON_FILE
 
 def process_json_files(input_dir, output_file):
     results = []
@@ -50,4 +49,4 @@ def process_json_files(input_dir, output_file):
 
 if __name__ == "__main__":
 
-    process_json_files(input_directory, output_json_file)
+    process_json_files(INPUT_DIRECTORY, MERGED_JSON_FILE)
