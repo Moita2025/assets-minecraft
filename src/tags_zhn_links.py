@@ -76,10 +76,21 @@ def get_tags_zhn_list_dict():
                 # 如果是复杂结构，保留原样（也可以改成递归）
                 new_values.append(v)
 
-        tags_zhn_list_dict[tag] = new_values
+        key_name = f"#minecraft:{tag}" if not tag.startswith("#minecraft:") else tag
+
+        tags_zhn_list_dict[key_name] = new_values
 
     return tags_zhn_list_dict
 
 if __name__ == "__main__":
 
-    print(get_tags_zhn_list_dict())
+    result = get_tags_zhn_list_dict()
+
+    pretty_json = json.dumps(
+        result,
+        indent=4,                # 四空格缩进
+        ensure_ascii=False,      # 保持中文不被转义（如果你想让中文原样输出）
+    )
+
+    # 在终端中打印
+    print(pretty_json)
