@@ -2,31 +2,40 @@ import json
 from pathlib import Path
 
 from recipes_analysis import get_all_tags
-from configs import TAGS_INPUT_DIRECTORY, ID_JSON_FILE
+from configs import TAGS_INPUT_DIRECTORIES, ID_JSON_FILE
 
 def get_tags_list_dict():
     tags = get_all_tags()
     tags_list_dict = {}
 
-    base_path = Path(TAGS_INPUT_DIRECTORY)
+    base_paths = [Path(p) for p in TAGS_INPUT_DIRECTORIES]
 
     for tag in tags:
-        file_path = base_path / f"{tag}.json"
+        found_file = None
 
-        # 文件不存在 → 报错并中止
-        if not file_path.exists():
-            raise FileNotFoundError(f"缺少 tag 文件: {file_path}")
+        # 在多个目录中查找
+        for base_path in base_paths:
+            file_path = base_path / f"{tag}.json"
+            if file_path.exists():
+                found_file = file_path
+                break  # 找到第一个就用
+
+        # 没找到 → 报错
+        if not found_file:
+            raise FileNotFoundError(
+                f"缺少 tag 文件: {tag}.json，已搜索目录: {TAGS_INPUT_DIRECTORIES}"
+            )
 
         # 读取 JSON
-        with open(file_path, "r", encoding="utf-8") as f:
+        with open(found_file, "r", encoding="utf-8") as f:
             data = json.load(f)
 
         # 校验 values
         if "values" not in data:
-            raise KeyError(f"{file_path} 缺少 'values' 字段")
+            raise KeyError(f"{found_file} 缺少 'values' 字段")
 
         if not isinstance(data["values"], list):
-            raise TypeError(f"{file_path} 的 'values' 不是数组")
+            raise TypeError(f"{found_file} 的 'values' 不是数组")
 
         tags_list_dict[tag] = data["values"]
 
@@ -72,5 +81,5 @@ def get_tags_zhn_list_dict():
     return tags_zhn_list_dict
 
 if __name__ == "__main__":
-    
+
     print(get_tags_zhn_list_dict())
