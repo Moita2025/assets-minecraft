@@ -86,11 +86,100 @@ def parse_crafting_shaped(tags_list_dict, original_recipes):
 
     return results
 
+POSITION_MAP = {
+    1: [5],
+    2: [5, 8],
+    3: [4, 5, 6],
+    4: [4, 5, 7, 8],
+    5: [4, 5, 7, 8, 9],
+    6: [4, 5, 6, 7, 8, 9],
+    7: [2, 4, 5, 6, 7, 8, 9],
+    8: [1, 2, 4, 5, 6, 7, 8, 9],
+    9: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+}
+
+def build_shapeless_location(items):
+    count = len(items)
+
+    positions = POSITION_MAP.get(count, [])
+    
+    # 初始化9格
+    location = ["null"] * 9
+
+    for item, pos in zip(items, positions):
+        location[pos - 1] = item  # 转成0-based index
+
+    return location
+
+def parse_ingredients(ingredients, tags_list_dict):
+    result = []
+
+    for ing in ingredients:
+
+        # 👉 情况1：字符串
+        if isinstance(ing, str):
+
+            if ing.startswith("#minecraft:"):
+                result.append(tags_list_dict.get(ing, []))
+            else:
+                result.append([ing])
+
+        # 👉 情况2：列表（多个候选）
+        elif isinstance(ing, list):
+
+            candidates = []
+
+            for item in ing:
+                if isinstance(item, str) and item.startswith("#minecraft:"):
+                    candidates.extend(tags_list_dict.get(item, []))
+                else:
+                    candidates.append(item)
+
+            result.append(candidates)
+
+        else:
+            # 👉 兜底（防炸）
+            result.append([])
+
+    return result
+
+def parse_crafting_shapeless(tags_list_dict, original_recipes):
+
+    results = []
+
+    for recipe in original_recipes:
+
+        if recipe.get("type") != "minecraft:crafting_shapeless":
+            continue
+
+        ingredients = recipe.get("ingredients", [])
+        result = recipe.get("result", {})
+
+        parsed_ingredients = parse_ingredients(ingredients, tags_list_dict)
+
+        # 👉 笛卡尔积（展开 tag）
+        for combo in itertools.product(*parsed_ingredients):
+
+            items = list(combo)
+
+            location = build_shapeless_location(items)
+
+            results.append({
+                "type": "minecraft:crafting_shapeless",
+                "input_items": list(set(map(str, items))),
+                "output_item": result.get("id"),
+                "output_count": result.get("count", 1),
+                "location": location
+            })
+
+    return results
+
 if __name__ == "__main__":
 
     tags_list_dict = get_tags_list_dict()
     original_recipes = get_original_recipes()
 
-    print(len(parse_crafting_shaped(tags_list_dict, original_recipes)))
+    # print(parse_crafting_shaped(tags_list_dict, original_recipes)[0:10])
+    print(parse_crafting_shapeless(tags_list_dict, original_recipes)[0:10])
 
     pass
