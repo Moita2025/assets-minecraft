@@ -4,42 +4,71 @@ from pathlib import Path
 from recipes_analysis import get_all_tags
 from configs import TAGS_INPUT_DIRECTORIES, ID_JSON_FILE
 
-def get_tags_list_dict():
-    tags = get_all_tags()
-    tags_list_dict = {}
-
+def load_all_tags():
     base_paths = [Path(p) for p in TAGS_INPUT_DIRECTORIES]
+    tag_map = {}
 
-    for tag in tags:
-        found_file = None
+    for base_path in base_paths:
+        for file in base_path.glob("*.json"):
+            tag_name = file.stem  # 不带 .json
 
-        # 在多个目录中查找
-        for base_path in base_paths:
-            file_path = base_path / f"{tag}.json"
-            if file_path.exists():
-                found_file = file_path
-                break  # 找到第一个就用
+            with open(file, "r", encoding="utf-8") as f:
+                data = json.load(f)
 
-        # 没找到 → 报错
-        if not found_file:
-            raise FileNotFoundError(
-                f"缺少 tag 文件: {tag}.json，已搜索目录: {TAGS_INPUT_DIRECTORIES}"
-            )
+            if "values" not in data or not isinstance(data["values"], list):
+                continue
 
-        # 读取 JSON
-        with open(found_file, "r", encoding="utf-8") as f:
-            data = json.load(f)
+            tag_map[tag_name] = data["values"]
 
-        # 校验 values
-        if "values" not in data:
-            raise KeyError(f"{found_file} 缺少 'values' 字段")
+    return tag_map
 
-        if not isinstance(data["values"], list):
-            raise TypeError(f"{found_file} 的 'values' 不是数组")
+def resolve_tag(tag, tag_map, cache, visiting, path=None):
+    
+    if path is None:
+        path = []
 
-        tags_list_dict[tag] = data["values"]
+    print(f"Resolving: {' -> '.join(path + [tag])}")
+    
+    # 已缓存
+    if tag in cache:
+        return cache[tag]
 
-    return tags_list_dict
+    # 检测循环引用
+    if tag in visiting:
+        cycle_path = " -> ".join(path + [tag])
+        raise ValueError(f"检测到循环引用: {tag}")
+
+    visiting.add(tag)
+    path.append(tag)
+
+    result = []
+
+    for v in tag_map.get(tag, []):
+        if isinstance(v, str) and v.startswith("#minecraft:"):
+            sub_tag = v.replace("#minecraft:", "")
+            result.extend(resolve_tag(sub_tag, tag_map, cache, visiting, path))
+        else:
+            result.append(v)
+
+    path.pop()
+    visiting.remove(tag)
+
+    # 去重（可选）
+    result = list(dict.fromkeys(result))
+
+    cache[tag] = result
+    return result
+
+def get_tags_list_dict():
+    tag_map = load_all_tags()
+
+    resolved = {}
+    cache = {}
+
+    for tag in tag_map:
+        resolved[tag] = resolve_tag(tag, tag_map, cache, set())
+
+    return resolved
 
 def get_tags_zhn_list_dict():
     tags_list_dict = get_tags_list_dict()

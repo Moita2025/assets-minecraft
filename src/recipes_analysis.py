@@ -58,7 +58,7 @@ def split_recipes_by_tag(data):
     return with_tag, without_tag
 
 
-def get_recipes_tag_dist(data, print = True):
+def get_recipes_tag_dist(data, output = True):
     """
     统计 '#minecraft:' 出现的频率
     """
@@ -78,7 +78,7 @@ def get_recipes_tag_dist(data, print = True):
     for item in data:
         extract_tags(item)
 
-    if (print):
+    if (output):
         # 输出统计
         for tag, count in tag_counter.items():
             print(f"{tag}: {count}")
