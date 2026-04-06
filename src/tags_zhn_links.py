@@ -22,12 +22,13 @@ def load_all_tags():
 
     return tag_map
 
-def resolve_tag(tag, tag_map, cache, visiting, path=None):
+def resolve_tag(tag, tag_map, cache, visiting, path=None, output = False):
     
     if path is None:
         path = []
 
-    print(f"Resolving: {' -> '.join(path + [tag])}")
+    if (output):
+        print(f"Resolving: {' -> '.join(path + [tag])}")
     
     # 已缓存
     if tag in cache:
@@ -59,14 +60,14 @@ def resolve_tag(tag, tag_map, cache, visiting, path=None):
     cache[tag] = result
     return result
 
-def get_tags_list_dict():
+def get_tags_list_dict(output = False):
     tag_map = load_all_tags()
 
     resolved = {}
     cache = {}
 
     for tag in tag_map:
-        resolved[tag] = resolve_tag(tag, tag_map, cache, set())
+        resolved[tag] = resolve_tag(tag, tag_map, cache, set(), output = output)
 
     return resolved
 
@@ -113,7 +114,7 @@ def get_tags_zhn_list_dict():
 
 if __name__ == "__main__":
 
-    result = get_tags_zhn_list_dict()
+    result = get_tags_zhn_list_dict(output = True)
 
     pretty_json = json.dumps(
         result,
