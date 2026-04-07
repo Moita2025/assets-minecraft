@@ -7,6 +7,36 @@ import itertools
 TAGS_LIST_DICT = get_tags_list_dict()
 ORIGINAL_RECIPES = get_original_recipes()
 
+def parse_pattern(pattern, symbol_map):
+    grid = []
+
+    for row in pattern:
+        row = list(row)
+        while len(row) < 3:
+            row.append(" ")
+        grid.append(row)
+
+    while len(grid) < 3:
+        grid.insert(0, [" ", " ", " "])
+
+    flat_pattern = [c for row in grid for c in row]
+
+    # 👉 3. 找到所有用到的 symbol
+    used_symbols = set([c for c in flat_pattern if c != " "])
+
+    # 👉 4. 准备组合
+    symbol_lists = []
+    symbol_keys = []
+
+    for sym in used_symbols:
+        items = symbol_map.get(sym, [])
+        if not items:
+            items = ["null"]
+        symbol_lists.append(items)
+        symbol_keys.append(sym)
+
+    return flat_pattern, symbol_keys, symbol_lists
+
 def parse_crafting_shaped(tags_list_dict = TAGS_LIST_DICT, original_recipes = ORIGINAL_RECIPES):
 
     results = []
@@ -28,38 +58,15 @@ def parse_crafting_shaped(tags_list_dict = TAGS_LIST_DICT, original_recipes = OR
             if isinstance(value, str) and value.startswith("#minecraft:"):
                 symbol_map[symbol] = tags_list_dict.get(value, [])
 
+            if isinstance(value, list):
+                symbol_map[symbol] = [item for item in value]
+
             else:
                 symbol_map[symbol] = [value]
 
         # print(symbol_map)
 
-        # 👉 2. 处理 pattern → 3x3
-        grid = []
-
-        for row in pattern:
-            row = list(row)
-            while len(row) < 3:
-                row.append(" ")
-            grid.append(row)
-
-        while len(grid) < 3:
-            grid.insert(0, [" ", " ", " "])
-
-        flat_pattern = [c for row in grid for c in row]
-
-        # 👉 3. 找到所有用到的 symbol
-        used_symbols = set([c for c in flat_pattern if c != " "])
-
-        # 👉 4. 准备组合
-        symbol_lists = []
-        symbol_keys = []
-
-        for sym in used_symbols:
-            items = symbol_map.get(sym, [])
-            if not items:
-                items = ["null"]
-            symbol_lists.append(items)
-            symbol_keys.append(sym)
+        flat_pattern, symbol_keys, symbol_lists = parse_pattern(pattern, symbol_map)
 
         # 👉 5. 笛卡尔积生成所有组合
         for combination in itertools.product(*symbol_lists):

@@ -1,7 +1,6 @@
 import json
 from pathlib import Path
 
-from recipes_analysis import get_all_tags
 from configs import TAGS_INPUT_DIRECTORIES, ID_JSON_FILE
 
 def load_all_tags():

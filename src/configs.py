@@ -4,3 +4,4 @@ TAGS_INPUT_DIRECTORIES = []
 ANALYSIS_PATH = ""
 MERGED_JSON_FILE = f"{ANALYSIS_PATH}/recipes_original.json"
 ID_JSON_FILE = f"{ANALYSIS_PATH}/config.json"
+FINAL_JSON_FILE = f"{ANALYSIS_PATH}/recipes.json"
