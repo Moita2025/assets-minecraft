@@ -71,9 +71,7 @@ def get_tags_list_dict(output = False):
 
     return resolved
 
-def get_tags_zhn_list_dict():
-    tags_list_dict = get_tags_list_dict()
-
+def get_en2zh_dict():
     # 读取 ID 映射表
     with open(ID_JSON_FILE, "r", encoding="utf-8") as f:
         id_data = json.load(f)
@@ -91,6 +89,13 @@ def get_tags_zhn_list_dict():
             en = last["englishId"]
             zh = item.get("chineseName", en)  # fallback
             en_to_zh[en] = zh
+
+    return en_to_zh
+
+def get_tags_zhn_list_dict(output = True):
+    tags_list_dict = get_tags_list_dict(output)
+
+    en_to_zh = get_en2zh_dict()
 
     # 转换 tags_list_dict
     tags_zhn_list_dict = {}

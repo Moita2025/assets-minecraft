@@ -4,7 +4,10 @@ from configs import ANALYSIS_PATH
 
 import itertools
 
-def parse_crafting_shaped(tags_list_dict, original_recipes):
+TAGS_LIST_DICT = get_tags_list_dict()
+ORIGINAL_RECIPES = get_original_recipes()
+
+def parse_crafting_shaped(tags_list_dict = TAGS_LIST_DICT, original_recipes = ORIGINAL_RECIPES):
 
     results = []
 
@@ -143,7 +146,7 @@ def parse_ingredients(ingredients, tags_list_dict):
 
     return result
 
-def parse_crafting_shapeless(tags_list_dict, original_recipes):
+def parse_crafting_shapeless(tags_list_dict = TAGS_LIST_DICT, original_recipes = ORIGINAL_RECIPES):
 
     results = []
 
@@ -174,7 +177,7 @@ def parse_crafting_shapeless(tags_list_dict, original_recipes):
 
     return results
 
-def parse_other(tags_list_dict, original_recipes):
+def parse_other(tags_list_dict = TAGS_LIST_DICT, original_recipes = ORIGINAL_RECIPES):
 
     results = []
 
@@ -215,11 +218,8 @@ def parse_other(tags_list_dict, original_recipes):
 
 if __name__ == "__main__":
 
-    tags_list_dict = get_tags_list_dict()
-    original_recipes = get_original_recipes()
-
-    print(parse_crafting_shaped(tags_list_dict, original_recipes)[0:10])
-    print(parse_crafting_shapeless(tags_list_dict, original_recipes)[0:10])
-    print(parse_other(tags_list_dict, original_recipes)[0:10])
+    print(parse_crafting_shaped()[0:10])
+    print(parse_crafting_shapeless()[0:10])
+    print(parse_other()[0:10])
 
     pass
