@@ -56,9 +56,9 @@ def parse_crafting_shaped(tags_list_dict = TAGS_LIST_DICT, original_recipes = OR
         for symbol, value in key.items():
 
             if isinstance(value, str) and value.startswith("#minecraft:"):
-                symbol_map[symbol] = tags_list_dict.get(value, [])
+                symbol_map[symbol] = tags_list_dict.get(value.replace("#minecraft:",""), [])
 
-            if isinstance(value, list):
+            elif isinstance(value, list):
                 symbol_map[symbol] = [item for item in value]
 
             else:
