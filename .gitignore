@@ -1,2 +1,3 @@
 **/recipes_original.json
 *.pyc
+/src/config

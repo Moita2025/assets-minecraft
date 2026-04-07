@@ -174,12 +174,52 @@ def parse_crafting_shapeless(tags_list_dict, original_recipes):
 
     return results
 
+def parse_other(tags_list_dict, original_recipes):
+
+    results = []
+
+    TARGET_TYPES = {
+        "minecraft:smelting",
+        "minecraft:blasting",
+        "minecraft:smoking",
+        "minecraft:campfire_cooking",
+        "minecraft:stonecutting"
+    }
+
+    for recipe in original_recipes:
+
+        r_type = recipe.get("type")
+
+        if r_type not in TARGET_TYPES:
+            continue
+
+        ingredient = recipe.get("ingredient")
+        result = recipe.get("result", {})
+
+        # 👉 解析 ingredient（复用逻辑）
+        parsed_ingredients = parse_ingredients([ingredient], tags_list_dict)
+
+        # 👉 展开 tag（笛卡尔积）
+        for combo in itertools.product(*parsed_ingredients):
+
+            item = combo[0] if combo else "null"
+
+            results.append({
+                "type": r_type,
+                "input_items": [str(item)],   # 单元素列表
+                "output_item": result.get("id") if isinstance(result, dict) else result,
+                "output_count": result.get("count", 1) if isinstance(result, dict) else 1
+            })
+
+    return results
+
 if __name__ == "__main__":
 
     tags_list_dict = get_tags_list_dict()
     original_recipes = get_original_recipes()
 
-    # print(parse_crafting_shaped(tags_list_dict, original_recipes)[0:10])
+    print(parse_crafting_shaped(tags_list_dict, original_recipes)[0:10])
     print(parse_crafting_shapeless(tags_list_dict, original_recipes)[0:10])
+    print(parse_other(tags_list_dict, original_recipes)[0:10])
 
     pass
