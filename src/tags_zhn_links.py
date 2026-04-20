@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-from configs import TAGS_INPUT_DIRECTORIES, ID_JSON_FILE
+from configs import TAGS_INPUT_DIRECTORIES, ID_JSON_FILE, TAG_JSON_FILE
 
 def load_all_tags():
     base_paths = [Path(p) for p in TAGS_INPUT_DIRECTORIES]
@@ -116,15 +116,48 @@ def get_tags_zhn_list_dict(output = True):
 
     return tags_zhn_list_dict
 
-if __name__ == "__main__":
+def format_list(lst, indent=4):
+    # 少于5个：一行
+    if len(lst) < 5:
+        return json.dumps(lst, ensure_ascii=False)
+    
+    # >=5个：多行，每10个一行
+    lines = []
+    for i in range(0, len(lst), 10):
+        chunk = lst[i:i+10]
+        line = ', '.join(json.dumps(x, ensure_ascii=False) for x in chunk)
+        lines.append(' ' * indent + line)
+    
+    return '[\n' + ',\n'.join(lines) + '\n]'
 
-    result = get_tags_zhn_list_dict(output = True)
+def save_result(result, path):
+    with open(path, 'w', encoding='utf-8') as f:
+        f.write('{\n')
+        
+        items = list(result.items())
+        for idx, (key, value) in enumerate(items):
+            f.write(f'    {json.dumps(key, ensure_ascii=False)}: ')
+            f.write(format_list(value, indent=8))
+            
+            if idx != len(items) - 1:
+                f.write(',')
+            f.write('\n')
+        
+        f.write('}\n')
+
+def get_tag_dict(output = False):
+    result = get_tags_zhn_list_dict(output = output)
 
     pretty_json = json.dumps(
         result,
-        indent=4,                # 四空格缩进
-        ensure_ascii=False,      # 保持中文不被转义（如果你想让中文原样输出）
+        indent=4,                
+        ensure_ascii=False,      
     )
+    if (output): print(pretty_json)
 
-    # 在终端中打印
-    print(pretty_json)
+    save_result(result, TAG_JSON_FILE)
+
+
+if __name__ == "__main__":
+
+    get_tag_dict()
