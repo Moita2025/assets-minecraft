@@ -1,4 +1,4 @@
-from recipes_analysis import get_original_recipes
+from recipe.base import get_original_recipes
 from tags_zhn_links import get_tags_list_dict
 from configs import ANALYSIS_PATH
 

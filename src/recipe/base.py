@@ -27,30 +27,30 @@ def get_recipes_type_dist(data):
     for t, count in type_count.items():
         print(f"{t}: {count}")
 
-def contains_minecraft_tag(obj):
+def contains_minecraft_tag(obj, prefix = "#minecraft:"):
     """
-    递归检查任意对象中是否包含 '#minecraft:' 子串
+    递归检查任意对象中是否包含 'prefix' 子串
     """
     if isinstance(obj, dict):
         return any(contains_minecraft_tag(v) for v in obj.values())
     elif isinstance(obj, list):
         return any(contains_minecraft_tag(i) for i in obj)
     elif isinstance(obj, str):
-        return "#minecraft:" in obj
+        return prefix in obj
     return False
 
 
-def split_recipes_by_tag(data):
+def split_recipes_by_tag(data, prefix = "#minecraft:"):
     """
     将 data 拆分为：
-    - 包含 #minecraft:
-    - 不包含 #minecraft:
+    - 包含 prefix
+    - 不包含 prefix
     """
     with_tag = []
     without_tag = []
 
     for item in data:
-        if contains_minecraft_tag(item):
+        if contains_minecraft_tag(item, prefix):
             with_tag.append(item)
         else:
             without_tag.append(item)
@@ -58,9 +58,9 @@ def split_recipes_by_tag(data):
     return with_tag, without_tag
 
 
-def get_recipes_tag_dist(data, output = True):
+def get_recipes_tag_dist(data, prefix = "#minecraft:", output = True):
     """
-    统计 '#minecraft:' 出现的频率
+    统计 'prefix' 出现的频率
     """
     tag_counter = Counter()
 
@@ -72,7 +72,7 @@ def get_recipes_tag_dist(data, output = True):
             for i in obj:
                 extract_tags(i)
         elif isinstance(obj, str):
-            if "#minecraft:" in obj:
+            if prefix in obj:
                 tag_counter[obj] += 1
 
     for item in data:
@@ -88,8 +88,8 @@ def get_recipes_tag_dist(data, output = True):
 def get_all_tags(prefix = "#minecraft:"):
 
     data = get_original_recipes()
-    with_tag, _ = split_recipes_by_tag(data)
-    tag_counter = get_recipes_tag_dist(with_tag, print=False)
+    with_tag, _ = split_recipes_by_tag(data, prefix)
+    tag_counter = get_recipes_tag_dist(with_tag, prefix, print=False)
 
     # 去重 + 去掉前缀
     cleaned_tags = [

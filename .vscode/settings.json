@@ -2,8 +2,14 @@
     "python-envs.pythonProjects": [
         {
             "path": ".",
-            "envManager": "ms-python.python:conda",
-            "packageManager": "ms-python.python:conda"
+            "envManager": "ms-python.python:system",
+            "packageManager": "ms-python.python:pip"
         }
-    ]
+    ],
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/src"
+    ],
+    "python.envFile": "${workspaceFolder}/.env",
+    // 可选：让终端也自动加载
+    "python.terminal.useEnvFile": true,
 }
