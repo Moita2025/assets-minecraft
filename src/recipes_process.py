@@ -3,9 +3,7 @@ from tags_zhn_links import get_en2zh_dict
 from configs import FINAL_JSON_FILE
 
 from recipes_parser import (
-    parse_crafting_shaped,
-    parse_crafting_shapeless,
-    parse_other
+    parse_all,
 )
 
 import json
@@ -36,10 +34,7 @@ if __name__ == "__main__":
 
     en2zh_dict = get_en2zh_dict()
 
-    all_results = []
-    all_results += parse_crafting_shaped()
-    all_results += parse_crafting_shapeless()
-    all_results += parse_other()
+    all_results = parse_all()
 
     print(f"总配方数量: {len(all_results)}")
 
