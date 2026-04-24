@@ -5,6 +5,7 @@ from configs import FINAL_JSON_FILE
 from recipes_parser import (
     parse_all,
 )
+from refs import is_tag_ref
 
 import json
 from pathlib import Path
@@ -23,6 +24,8 @@ def translate_item(item, en2zh_dict, missing_set):
     """单个 item 翻译（带缺失记录）"""
     if item == "null":
         return "null"
+    if is_tag_ref(item):
+        return item
 
     if item in en2zh_dict:
         return en2zh_dict[item]
@@ -47,6 +50,8 @@ if __name__ == "__main__":
             translate_item(item, en2zh_dict, missing_items)
             for item in recipe.get("input_items", [])
         ]
+        recipe["input_tags"] = recipe.get("input_tags", [])
+        recipe["hasTag"] = recipe.get("hasTag", len(recipe["input_tags"]) > 0)
 
         # output_item
         recipe["output_item"] = translate_item(
@@ -67,11 +72,11 @@ if __name__ == "__main__":
             ]
 
     if missing_items:
-        print("\n⚠️ 以下物品没有中文映射：")
+        print("\n[WARN] 以下物品没有中文映射：")
         for item in sorted(missing_items):
             print(item)   
 
     with open(FINAL_JSON_FILE, "w", encoding="utf-8") as f:
         json.dump(all_results, f, ensure_ascii=False, indent=2)
 
-    print(f"\n✅ 已输出到: {FINAL_JSON_FILE}")
+    print(f"\n[OK] 已输出到: {FINAL_JSON_FILE}")
