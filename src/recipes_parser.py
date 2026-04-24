@@ -7,6 +7,12 @@ import itertools
 TAGS_LIST_DICT = get_tags_list_dict()
 ORIGINAL_RECIPES = get_original_recipes()
 
+
+def get_tag_items(tag_ref, tags_list_dict):
+    if not isinstance(tag_ref, str) or not tag_ref.startswith("#"):
+        return []
+    return tags_list_dict.get(tag_ref[1:], [])
+
 def parse_pattern(pattern, symbol_map):
     grid = []
 
@@ -55,8 +61,8 @@ def parse_crafting_shaped(tags_list_dict = TAGS_LIST_DICT, original_recipes = OR
 
         for symbol, value in key.items():
 
-            if isinstance(value, str) and value.startswith("#minecraft:"):
-                symbol_map[symbol] = tags_list_dict.get(value.replace("#minecraft:",""), [])
+            if isinstance(value, str) and value.startswith("#"):
+                symbol_map[symbol] = get_tag_items(value, tags_list_dict)
 
             elif isinstance(value, list):
                 symbol_map[symbol] = [item for item in value]
@@ -129,8 +135,8 @@ def parse_ingredients(ingredients, tags_list_dict):
         # 👉 情况1：字符串
         if isinstance(ing, str):
 
-            if ing.startswith("#minecraft:"):
-                result.append(tags_list_dict.get(ing, []))
+            if ing.startswith("#"):
+                result.append(get_tag_items(ing, tags_list_dict))
             else:
                 result.append([ing])
 
@@ -140,8 +146,8 @@ def parse_ingredients(ingredients, tags_list_dict):
             candidates = []
 
             for item in ing:
-                if isinstance(item, str) and item.startswith("#minecraft:"):
-                    candidates.extend(tags_list_dict.get(item, []))
+                if isinstance(item, str) and item.startswith("#"):
+                    candidates.extend(get_tag_items(item, tags_list_dict))
                 else:
                     candidates.append(item)
 

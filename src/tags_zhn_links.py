@@ -1,15 +1,20 @@
 import json
 from pathlib import Path
 
-from configs import TAGS_INPUT_DIRECTORIES, ID_JSON_FILE, TAG_JSON_FILE
+from configs import (
+    TAGS_INPUT_DIRECTORIES,
+    ID_JSON_FILE,
+    TAG_JSON_FILE,
+    DEFAULT_NAMESPACE,
+)
 
 def load_all_tags():
     base_paths = [Path(p) for p in TAGS_INPUT_DIRECTORIES]
     tag_map = {}
 
     for base_path in base_paths:
-        for file in base_path.glob("*.json"):
-            tag_name = file.stem  # 不带 .json
+        for file in base_path.rglob("*.json"):
+            tag_name = get_namespaced_tag_name(base_path, file)
 
             with open(file, "r", encoding="utf-8") as f:
                 data = json.load(f)
@@ -20,6 +25,30 @@ def load_all_tags():
             tag_map[tag_name] = data["values"]
 
     return tag_map
+
+
+def get_namespaced_tag_name(base_path, file_path):
+    """
+    根据目录结构解析命名空间，统一返回 namespace:path 形式。
+    支持目录形如 data/<namespace>/tags/<kind>/.../*.json。
+    """
+    relative_stem = file_path.relative_to(base_path).with_suffix("").as_posix()
+    namespace = DEFAULT_NAMESPACE
+    parts = file_path.parts
+    if "data" in parts:
+        data_index = parts.index("data")
+        if data_index + 1 < len(parts):
+            namespace = parts[data_index + 1]
+    return f"{namespace}:{relative_stem}"
+
+
+def parse_tag_ref(tag_ref):
+    if not isinstance(tag_ref, str) or not tag_ref.startswith("#"):
+        return None
+    value = tag_ref[1:]
+    if ":" in value:
+        return value
+    return f"{DEFAULT_NAMESPACE}:{value}"
 
 def resolve_tag(tag, tag_map, cache, visiting, path=None, output = False):
     
@@ -44,9 +73,9 @@ def resolve_tag(tag, tag_map, cache, visiting, path=None, output = False):
     result = []
 
     for v in tag_map.get(tag, []):
-        if isinstance(v, str) and v.startswith("#minecraft:"):
-            sub_tag = v.replace("#minecraft:", "")
-            result.extend(resolve_tag(sub_tag, tag_map, cache, visiting, path))
+        parsed_tag = parse_tag_ref(v)
+        if parsed_tag:
+            result.extend(resolve_tag(parsed_tag, tag_map, cache, visiting, path))
         else:
             result.append(v)
 
@@ -110,7 +139,7 @@ def get_tags_zhn_list_dict(output = True):
                 # 如果是复杂结构，保留原样（也可以改成递归）
                 new_values.append(v)
 
-        key_name = f"#minecraft:{tag}" if not tag.startswith("#minecraft:") else tag
+        key_name = f"#{tag}" if not tag.startswith("#") else tag
 
         tags_zhn_list_dict[key_name] = new_values
 

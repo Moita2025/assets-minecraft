@@ -2,7 +2,7 @@ import json
 from collections import Counter
 from pathlib import Path
 
-from configs import MERGED_JSON_FILE
+from configs import MERGED_JSON_FILE, DEFAULT_TAG_PREFIX
 
 def get_original_recipes():
 
@@ -27,7 +27,7 @@ def get_recipes_type_dist(data):
     for t, count in type_count.items():
         print(f"{t}: {count}")
 
-def contains_minecraft_tag(obj, prefix = "#minecraft:"):
+def contains_minecraft_tag(obj, prefix=DEFAULT_TAG_PREFIX):
     """
     递归检查任意对象中是否包含 'prefix' 子串
     """
@@ -40,7 +40,7 @@ def contains_minecraft_tag(obj, prefix = "#minecraft:"):
     return False
 
 
-def split_recipes_by_tag(data, prefix = "#minecraft:"):
+def split_recipes_by_tag(data, prefix=DEFAULT_TAG_PREFIX):
     """
     将 data 拆分为：
     - 包含 prefix
@@ -58,7 +58,7 @@ def split_recipes_by_tag(data, prefix = "#minecraft:"):
     return with_tag, without_tag
 
 
-def get_recipes_tag_dist(data, prefix = "#minecraft:", output = True):
+def get_recipes_tag_dist(data, prefix=DEFAULT_TAG_PREFIX, output=True):
     """
     统计 'prefix' 出现的频率
     """
@@ -85,7 +85,7 @@ def get_recipes_tag_dist(data, prefix = "#minecraft:", output = True):
 
     return tag_counter
 
-def get_all_tags(prefix = "#minecraft:"):
+def get_all_tags(prefix=DEFAULT_TAG_PREFIX):
 
     data = get_original_recipes()
     with_tag, _ = split_recipes_by_tag(data, prefix)
