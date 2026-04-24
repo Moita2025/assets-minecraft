@@ -7,6 +7,7 @@ from configs import (
     TAG_JSON_FILE,
     DEFAULT_NAMESPACE,
 )
+from refs import normalize_tag_ref, to_tag_ref
 
 def load_all_tags():
     base_paths = [Path(p) for p in TAGS_INPUT_DIRECTORIES]
@@ -42,14 +43,6 @@ def get_namespaced_tag_name(base_path, file_path):
     return f"{namespace}:{relative_stem}"
 
 
-def parse_tag_ref(tag_ref):
-    if not isinstance(tag_ref, str) or not tag_ref.startswith("#"):
-        return None
-    value = tag_ref[1:]
-    if ":" in value:
-        return value
-    return f"{DEFAULT_NAMESPACE}:{value}"
-
 def resolve_tag(tag, tag_map, cache, visiting, path=None, output = False):
     
     if path is None:
@@ -73,7 +66,7 @@ def resolve_tag(tag, tag_map, cache, visiting, path=None, output = False):
     result = []
 
     for v in tag_map.get(tag, []):
-        parsed_tag = parse_tag_ref(v)
+        parsed_tag = normalize_tag_ref(v)
         if parsed_tag:
             result.extend(resolve_tag(parsed_tag, tag_map, cache, visiting, path))
         else:
@@ -139,7 +132,7 @@ def get_tags_zhn_list_dict(output = True):
                 # 如果是复杂结构，保留原样（也可以改成递归）
                 new_values.append(v)
 
-        key_name = f"#{tag}" if not tag.startswith("#") else tag
+        key_name = to_tag_ref(tag) if not tag.startswith("#") else tag
 
         tags_zhn_list_dict[key_name] = new_values
 

@@ -1,6 +1,7 @@
 from recipe.base import get_original_recipes
 from tags_zhn_links import get_tags_list_dict
 from configs import ANALYSIS_PATH
+from refs import is_tag_ref, normalize_tag_ref
 
 import itertools
 
@@ -9,9 +10,10 @@ ORIGINAL_RECIPES = get_original_recipes()
 
 
 def get_tag_items(tag_ref, tags_list_dict):
-    if not isinstance(tag_ref, str) or not tag_ref.startswith("#"):
+    normalized_tag = normalize_tag_ref(tag_ref)
+    if not normalized_tag:
         return []
-    return tags_list_dict.get(tag_ref[1:], [])
+    return tags_list_dict.get(normalized_tag, [])
 
 def parse_pattern(pattern, symbol_map):
     grid = []
@@ -61,7 +63,7 @@ def parse_crafting_shaped(tags_list_dict = TAGS_LIST_DICT, original_recipes = OR
 
         for symbol, value in key.items():
 
-            if isinstance(value, str) and value.startswith("#"):
+            if is_tag_ref(value):
                 symbol_map[symbol] = get_tag_items(value, tags_list_dict)
 
             elif isinstance(value, list):
@@ -135,7 +137,7 @@ def parse_ingredients(ingredients, tags_list_dict):
         # 👉 情况1：字符串
         if isinstance(ing, str):
 
-            if ing.startswith("#"):
+            if is_tag_ref(ing):
                 result.append(get_tag_items(ing, tags_list_dict))
             else:
                 result.append([ing])
@@ -146,7 +148,7 @@ def parse_ingredients(ingredients, tags_list_dict):
             candidates = []
 
             for item in ing:
-                if isinstance(item, str) and item.startswith("#"):
+                if is_tag_ref(item):
                     candidates.extend(get_tag_items(item, tags_list_dict))
                 else:
                     candidates.append(item)
