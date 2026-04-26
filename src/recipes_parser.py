@@ -1,7 +1,7 @@
 from recipe.base import get_original_recipes
 from tags_zhn_links import get_tags_list_dict
 from parser.registry import RecipeParserRegistry
-from parsers_minecraft import (
+from parser.vanilla import (
     parse_crafting_shaped_recipe,
     parse_crafting_shapeless_recipe,
     parse_single_ingredient_recipe,
