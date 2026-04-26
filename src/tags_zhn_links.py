@@ -7,7 +7,7 @@ from configs import (
     TAG_JSON_FILE,
     DEFAULT_NAMESPACE,
 )
-from refs import normalize_tag_ref, to_tag_ref
+from tag.refs import normalize_tag_ref, to_tag_ref
 
 def load_all_tags():
     base_paths = [Path(p) for p in TAGS_INPUT_DIRECTORIES]

@@ -5,7 +5,7 @@ from configs import FINAL_JSON_FILE
 from recipes_parser import (
     parse_all,
 )
-from refs import is_tag_ref
+from tag.refs import is_tag_ref
 
 import json
 from pathlib import Path

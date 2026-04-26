@@ -1,6 +1,6 @@
 import itertools
 
-from refs import is_tag_ref, normalize_tag_ref
+from tag.refs import is_tag_ref, normalize_tag_ref
 
 
 POSITION_MAP = {
