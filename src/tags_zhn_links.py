@@ -8,6 +8,7 @@ from configs import (
     DEFAULT_NAMESPACE,
 )
 from tag.refs import normalize_tag_ref, to_tag_ref
+from id.base import get_id_dict
 
 def load_all_tags():
     base_paths = [Path(p) for p in TAGS_INPUT_DIRECTORIES]
@@ -92,31 +93,10 @@ def get_tags_list_dict(output = False):
 
     return resolved
 
-def get_en2zh_dict():
-    # 读取 ID 映射表
-    with open(ID_JSON_FILE, "r", encoding="utf-8") as f:
-        id_data = json.load(f)
-
-    # 构建 englishId -> 中文 的映射
-    en_to_zh = {}
-
-    for item in id_data:
-        if "idDetails" not in item or not item["idDetails"]:
-            continue
-
-        last = item["idDetails"][-1]
-
-        if "englishId" in last:
-            en = last["englishId"]
-            zh = item.get("chineseName", en)  # fallback
-            en_to_zh[en] = zh
-
-    return en_to_zh
-
 def get_tags_zhn_list_dict(output = True):
     tags_list_dict = get_tags_list_dict(output)
 
-    en_to_zh = get_en2zh_dict()
+    en_to_zh = get_id_dict()
 
     # 转换 tags_list_dict
     tags_zhn_list_dict = {}

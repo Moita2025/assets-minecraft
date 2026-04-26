@@ -1,4 +1,4 @@
-from tags_zhn_links import get_en2zh_dict
+from id.base import get_id_dict
 
 from configs import FINAL_JSON_FILE
 
@@ -35,7 +35,7 @@ def translate_item(item, en2zh_dict, missing_set):
 
 if __name__ == "__main__":
 
-    en2zh_dict = get_en2zh_dict()
+    en2zh_dict = get_id_dict()
 
     all_results = parse_all()
 
