@@ -2,7 +2,7 @@ from id.base import get_id_dict
 
 from configs import FINAL_JSON_FILE
 
-from recipes_parser import (
+from parser.build import (
     parse_all,
 )
 from tag.refs import is_tag_ref
