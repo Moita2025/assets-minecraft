@@ -1,1566 +1,1879 @@
 [
     {
         "chineseName": "山脉",
+        "aliasID": "zhwiki:00",
         "type": "生成结构",
         "srcName": "EnvSprite_mountain.png"
     },
     {
         "chineseName": "浮岛",
+        "aliasID": "zhwiki:01",
         "type": "生成结构",
         "srcName": "EnvSprite_floating-island.png"
     },
     {
         "chineseName": "丘陵",
+        "aliasID": "zhwiki:02",
         "type": "生成结构",
         "srcName": "EnvSprite_hill.png"
     },
     {
         "chineseName": "地表层",
+        "aliasID": "zhwiki:03",
         "type": "生成结构",
         "srcName": "EnvSprite_fill-layer.png"
     },
     {
         "chineseName": "盆地",
+        "aliasID": "zhwiki:04",
         "type": "生成结构",
         "srcName": "EnvSprite_erosion.png"
     },
     {
         "chineseName": "岩柱",
+        "aliasID": "zhwiki:05",
         "type": "生成结构",
         "srcName": "EnvSprite_bryce-pillar.png"
     },
     {
         "chineseName": "冰山",
+        "aliasID": "zhwiki:06",
         "type": "生成结构",
         "srcName": "EnvSprite_iceberg.png"
     },
     {
         "chineseName": "峡谷",
+        "aliasID": "zhwiki:07",
         "type": "生成结构",
         "srcName": "EnvSprite_canyon.png"
     },
     {
         "chineseName": "芝士洞穴",
+        "aliasID": "zhwiki:08",
         "type": "生成结构",
         "srcName": "EnvSprite_cheese-cave.png"
     },
     {
         "chineseName": "意面洞穴",
+        "aliasID": "zhwiki:09",
         "type": "生成结构",
         "srcName": "EnvSprite_spaghetti-cave.png"
     },
     {
         "chineseName": "面条洞穴",
+        "aliasID": "zhwiki:0A",
         "type": "生成结构",
         "srcName": "EnvSprite_noodle-cave.png"
     },
     {
         "chineseName": "含水层",
+        "aliasID": "zhwiki:0B",
         "type": "生成结构",
         "srcName": "EnvSprite_lava-aquifer.png"
     },
     {
         "chineseName": "矿脉",
+        "aliasID": "zhwiki:0C",
         "type": "生成结构",
         "srcName": "EnvSprite_ore-vein.png"
     },
     {
         "chineseName": "下界盆地",
+        "aliasID": "zhwiki:0D",
         "type": "生成结构",
         "srcName": "EnvSprite_erosion.png"
     },
     {
         "chineseName": "熔岩海",
+        "aliasID": "zhwiki:0E",
         "type": "生成结构",
         "srcName": "EnvSprite_lava-sea.png"
     },
     {
         "chineseName": "中央岛屿",
+        "aliasID": "zhwiki:0F",
         "type": "生成结构",
         "srcName": "BiomeSprite_the-end.png"
     },
     {
         "chineseName": "外部岛屿",
+        "aliasID": "zhwiki:0G",
         "type": "生成结构",
         "srcName": "BiomeSprite_small-end-islands.png"
     },
     {
         "chineseName": "末地盆地",
+        "aliasID": "zhwiki:0H",
         "type": "生成结构",
         "srcName": "EnvSprite_erosion.png"
     },
     {
         "chineseName": "黑曜石平台",
+        "aliasID": "zhwiki:0I",
         "type": "生成结构",
         "srcName": "EnvSprite_end-platform.png"
     },
     {
         "chineseName": "废弃传送门",
+        "aliasID": "zhwiki:0J",
         "type": "生成结构",
         "srcName": "EnvSprite_overworld-ruined-portal.png"
     },
     {
         "chineseName": "沙漠神殿",
+        "aliasID": "zhwiki:0K",
         "type": "生成结构",
         "srcName": "EnvSprite_desert-pyramid.png"
     },
     {
         "chineseName": "雪屋",
+        "aliasID": "zhwiki:0L",
         "type": "生成结构",
         "srcName": "EnvSprite_igloo.png"
     },
     {
         "chineseName": "丛林神庙",
+        "aliasID": "zhwiki:0M",
         "type": "生成结构",
         "srcName": "EnvSprite_jungle-pyramid.png"
     },
     {
         "chineseName": "掠夺者前哨站",
+        "aliasID": "zhwiki:0N",
         "type": "生成结构",
         "srcName": "EnvSprite_pillager-outpost.png"
     },
     {
         "chineseName": "沼泽小屋",
+        "aliasID": "zhwiki:0O",
         "type": "生成结构",
         "srcName": "EnvSprite_swamp-hut.png"
     },
     {
         "chineseName": "村庄",
+        "aliasID": "zhwiki:0P",
         "type": "生成结构",
         "srcName": "EnvSprite_new-village.png"
     },
     {
         "chineseName": "林地府邸",
+        "aliasID": "zhwiki:0Q",
         "type": "生成结构",
         "srcName": "EnvSprite_mansion.png"
     },
     {
         "chineseName": "远古城市",
+        "aliasID": "zhwiki:0R",
         "type": "生成结构",
         "srcName": "EnvSprite_ancient-city.png"
     },
     {
         "chineseName": "埋藏的宝藏",
+        "aliasID": "zhwiki:0S",
         "type": "生成结构",
         "srcName": "EnvSprite_bonus-chest.png"
     },
     {
         "chineseName": "废弃矿井",
+        "aliasID": "zhwiki:0T",
         "type": "生成结构",
         "srcName": "EnvSprite_abandoned-mineshaft.png"
     },
     {
         "chineseName": "要塞",
+        "aliasID": "zhwiki:0U",
         "type": "生成结构",
         "srcName": "EnvSprite_stronghold.png"
     },
     {
         "chineseName": "末地传送门",
+        "aliasID": "zhwiki:0V",
         "type": "生成结构",
         "srcName": "EnvSprite_end-portal.png"
     },
     {
         "chineseName": "古迹废墟",
+        "aliasID": "zhwiki:0W",
         "type": "生成结构",
         "srcName": "EnvSprite_trail-ruins.png"
     },
     {
         "chineseName": "试炼密室",
+        "aliasID": "zhwiki:0X",
         "type": "生成结构",
         "srcName": "EnvSprite_trial-chambers.png"
     },
     {
         "chineseName": "海底神殿",
+        "aliasID": "zhwiki:0Y",
         "type": "生成结构",
         "srcName": "EnvSprite_monument.png"
     },
     {
         "chineseName": "海底废墟",
+        "aliasID": "zhwiki:0Z",
         "type": "生成结构",
         "srcName": "EnvSprite_ocean-ruin.png"
     },
     {
         "chineseName": "沉船",
+        "aliasID": "zhwiki:0a",
         "type": "生成结构",
         "srcName": "EnvSprite_shipwreck.png"
     },
     {
         "chineseName": "珊瑚礁",
+        "aliasID": "zhwiki:0b",
         "type": "生成结构",
         "srcName": "EnvSprite_coral-reef.png"
     },
     {
         "chineseName": "堡垒遗迹",
+        "aliasID": "zhwiki:0c",
         "type": "生成结构",
         "srcName": "EnvSprite_bastion-remnant.png"
     },
     {
         "chineseName": "下界要塞",
+        "aliasID": "zhwiki:0d",
         "type": "生成结构",
         "srcName": "EnvSprite_fortress.png"
     },
     {
         "chineseName": "下界化石",
+        "aliasID": "zhwiki:0e",
         "type": "生成结构",
         "srcName": "EnvSprite_nether-fossil.png"
     },
     {
         "chineseName": "废弃传送门",
+        "aliasID": "zhwiki:0f",
         "type": "生成结构",
         "srcName": "EnvSprite_ruined-portal.png"
     },
     {
         "chineseName": "末地城",
+        "aliasID": "zhwiki:0g",
         "type": "生成结构",
         "srcName": "EnvSprite_end-city.png"
     },
     {
         "chineseName": "末地船",
+        "aliasID": "zhwiki:0h",
         "type": "生成结构",
         "srcName": "EnvSprite_end-ship.png"
     },
     {
         "chineseName": "蓝冰",
+        "aliasID": "zhwiki:0i",
         "type": "生成结构",
         "srcName": "BlockSprite_blue-ice.png"
     },
     {
         "chineseName": "奖励箱",
+        "aliasID": "zhwiki:0j",
         "type": "生成结构",
         "srcName": "EnvSprite_bonus-chest.png"
     },
     {
         "chineseName": "沙漠水井",
+        "aliasID": "zhwiki:0k",
         "type": "生成结构",
         "srcName": "EnvSprite_desert-well.png"
     },
     {
         "chineseName": "圆盘",
+        "aliasID": "zhwiki:0l",
         "type": "生成结构",
         "srcName": "EnvSprite_disk.png"
     },
     {
         "chineseName": "生苔的巨石",
+        "aliasID": "zhwiki:0m",
         "type": "生成结构",
         "srcName": "EnvSprite_forest-rock.png"
     },
     {
         "chineseName": "冰山",
+        "aliasID": "zhwiki:0n",
         "type": "生成结构",
         "srcName": "EnvSprite_iceberg.png"
     },
     {
         "chineseName": "冰刺",
+        "aliasID": "zhwiki:0o",
         "type": "生成结构",
         "srcName": "EnvSprite_ice-spike.png"
     },
     {
         "chineseName": "熔岩湖",
+        "aliasID": "zhwiki:0p",
         "type": "生成结构",
         "srcName": "EnvSprite_lake-lava.png"
     },
     {
         "chineseName": "方块堆",
+        "aliasID": "zhwiki:0q",
         "type": "生成结构",
         "srcName": "EnvSprite_hay-bale-pile.png"
     },
     {
         "chineseName": "涌泉",
+        "aliasID": "zhwiki:0r",
         "type": "生成结构",
         "srcName": "EnvSprite_spring.png"
     },
     {
         "chineseName": "冰冻顶层",
+        "aliasID": "zhwiki:0s",
         "type": "生成结构",
         "srcName": "EnvSprite_freeze-top-layer.png"
     },
     {
         "chineseName": "紫晶洞",
+        "aliasID": "zhwiki:0t",
         "type": "生成结构",
         "srcName": "EnvSprite_amethyst-geode.png"
     },
     {
         "chineseName": "团簇",
+        "aliasID": "zhwiki:0u",
         "type": "生成结构",
         "srcName": "EnvSprite_ore.png"
     },
     {
         "chineseName": "滴水石锥",
+        "aliasID": "zhwiki:0v",
         "type": "生成结构",
         "srcName": "EnvSprite_dripstone.png"
     },
     {
         "chineseName": "地牢",
+        "aliasID": "zhwiki:0w",
         "type": "生成结构",
         "srcName": "EnvSprite_dungeon.png"
     },
     {
         "chineseName": "化石",
+        "aliasID": "zhwiki:0x",
         "type": "生成结构",
         "srcName": "EnvSprite_fossil.png"
     },
     {
         "chineseName": "熔岩湖",
+        "aliasID": "zhwiki:0y",
         "type": "生成结构",
         "srcName": "EnvSprite_lake-lava.png"
     },
     {
         "chineseName": "水下岩浆块",
+        "aliasID": "zhwiki:0z",
         "type": "生成结构",
         "srcName": "BlockSprite_magma-block.png"
     },
     {
         "chineseName": "竹子",
+        "aliasID": "zhwiki:10",
         "type": "生成结构",
         "srcName": "BlockSprite_bamboo.png"
     },
     {
         "chineseName": "洞穴藤蔓",
+        "aliasID": "zhwiki:11",
         "type": "生成结构",
         "srcName": "BlockSprite_cave-vine.png"
     },
     {
         "chineseName": "倒下的树木",
+        "aliasID": "zhwiki:12",
         "type": "生成结构",
         "srcName": "EnvSprite_fallen-oak.png"
     },
     {
         "chineseName": "发光地衣",
+        "aliasID": "zhwiki:13",
         "type": "生成结构",
         "srcName": "BlockSprite_glow-lichen.png"
     },
     {
         "chineseName": "多叶黏土层",
+        "aliasID": "zhwiki:14",
         "type": "生成结构",
         "srcName": "EnvSprite_leaf-clay.png"
     },
     {
         "chineseName": "巨型蘑菇",
+        "aliasID": "zhwiki:15",
         "type": "生成结构",
         "srcName": "EnvSprite_huge-mushroom.png"
     },
     {
         "chineseName": "随机斑块",
+        "aliasID": "zhwiki:16",
         "type": "生成结构",
         "srcName": "EnvSprite_random-patch.png"
     },
     {
         "chineseName": "幽匿斑块",
+        "aliasID": "zhwiki:17",
         "type": "生成结构",
         "srcName": "BlockSprite_sculk.png"
     },
     {
         "chineseName": "藤蔓",
+        "aliasID": "zhwiki:18",
         "type": "生成结构",
         "srcName": "BlockSprite_vine.png"
     },
     {
         "chineseName": "树木",
+        "aliasID": "zhwiki:19",
         "type": "生成结构",
         "srcName": "EnvSprite_trees.png"
     },
     {
         "chineseName": "橡树",
+        "aliasID": "zhwiki:1A",
         "type": "生成结构",
         "srcName": "EnvSprite_oak.png"
     },
     {
         "chineseName": "云杉",
+        "aliasID": "zhwiki:1B",
         "type": "生成结构",
         "srcName": "EnvSprite_spruce.png"
     },
     {
         "chineseName": "白桦",
+        "aliasID": "zhwiki:1C",
         "type": "生成结构",
         "srcName": "EnvSprite_birch.png"
     },
     {
         "chineseName": "丛林树",
+        "aliasID": "zhwiki:1D",
         "type": "生成结构",
         "srcName": "EnvSprite_jungle-tree.png"
     },
     {
         "chineseName": "金合欢树",
+        "aliasID": "zhwiki:1E",
         "type": "生成结构",
         "srcName": "EnvSprite_acacia.png"
     },
     {
         "chineseName": "深色橡树",
+        "aliasID": "zhwiki:1F",
         "type": "生成结构",
         "srcName": "EnvSprite_dark-oak.png"
     },
     {
         "chineseName": "杜鹃树",
+        "aliasID": "zhwiki:1G",
         "type": "生成结构",
         "srcName": "EnvSprite_azalea-tree.png"
     },
     {
         "chineseName": "红树",
+        "aliasID": "zhwiki:1H",
         "type": "生成结构",
         "srcName": "EnvSprite_mangrove.png"
     },
     {
         "chineseName": "樱花树",
+        "aliasID": "zhwiki:1I",
         "type": "生成结构",
         "srcName": "EnvSprite_cherry.png"
     },
     {
         "chineseName": "苍白橡树",
+        "aliasID": "zhwiki:1J",
         "type": "生成结构",
         "srcName": "EnvSprite_pale-oak.png"
     },
     {
         "chineseName": "珊瑚礁",
+        "aliasID": "zhwiki:1K",
         "type": "生成结构",
         "srcName": "EnvSprite_coral-reef.png"
     },
     {
         "chineseName": "玄武岩石柱林",
+        "aliasID": "zhwiki:1L",
         "type": "生成结构",
         "srcName": "EnvSprite_basalt-column.png"
     },
     {
         "chineseName": "玄武岩柱",
+        "aliasID": "zhwiki:1M",
         "type": "生成结构",
         "srcName": "EnvSprite_basalt-pillar.png"
     },
     {
         "chineseName": "团簇",
+        "aliasID": "zhwiki:1N",
         "type": "生成结构",
         "srcName": "EnvSprite_ore.png"
     },
     {
         "chineseName": "三角洲",
+        "aliasID": "zhwiki:1O",
         "type": "生成结构",
         "srcName": "EnvSprite_delta.png"
     },
     {
         "chineseName": "荧石堆",
+        "aliasID": "zhwiki:1P",
         "type": "生成结构",
         "srcName": "EnvSprite_glowstone-blob.png"
     },
     {
         "chineseName": "巨型下界菌",
+        "aliasID": "zhwiki:1Q",
         "type": "生成结构",
         "srcName": "EnvSprite_huge-fungus.png"
     },
     {
         "chineseName": "随机斑块",
+        "aliasID": "zhwiki:1R",
         "type": "生成结构",
         "srcName": "EnvSprite_random-patch.png"
     },
     {
         "chineseName": "涌泉",
+        "aliasID": "zhwiki:1S",
         "type": "生成结构",
         "srcName": "EnvSprite_lava-spring.png"
     },
     {
         "chineseName": "紫颂树",
+        "aliasID": "zhwiki:1T",
         "type": "生成结构",
         "srcName": "EnvSprite_chorus-plant.png"
     },
     {
         "chineseName": "末地折跃门",
+        "aliasID": "zhwiki:1U",
         "type": "生成结构",
         "srcName": "EnvSprite_end-gateway.png"
     },
     {
         "chineseName": "末地浮岛",
+        "aliasID": "zhwiki:1V",
         "type": "生成结构",
         "srcName": "EnvSprite_end-island.png"
     },
     {
         "chineseName": "返回传送门",
+        "aliasID": "zhwiki:1W",
         "type": "生成结构",
         "srcName": "EnvSprite_end-fountain.png"
     },
     {
         "chineseName": "黑曜石柱",
+        "aliasID": "zhwiki:1X",
         "type": "生成结构",
         "srcName": "EnvSprite_end-pillar.png"
     },
     {
         "chineseName": "末地平台",
+        "aliasID": "zhwiki:1Y",
         "type": "生成结构",
         "srcName": "EnvSprite_end-platform.png"
     },
     {
         "chineseName": "填充层",
+        "aliasID": "zhwiki:1Z",
         "type": "生成结构",
         "srcName": "EnvSprite_fill-layer.png"
     },
     {
         "chineseName": "虚空平台",
+        "aliasID": "zhwiki:1a",
         "type": "生成结构",
         "srcName": "EnvSprite_cobblestone-platform.png"
     },
     {
         "chineseName": "红砖块金字塔",
+        "aliasID": "zhwiki:1b",
         "type": "生成结构",
         "srcName": "EnvSprite_brick-pyramid.png"
     },
     {
         "chineseName": "黑曜石墙",
+        "aliasID": "zhwiki:1c",
         "type": "生成结构",
         "srcName": "EnvSprite_obsidian-wall.png"
     },
     {
         "chineseName": "Indev房子",
+        "aliasID": "zhwiki:1d",
         "type": "生成结构",
         "srcName": "EnvSprite_indev-house.png"
     },
     {
         "chineseName": "玻璃柱",
+        "aliasID": "zhwiki:1e",
         "type": "生成结构",
         "srcName": "BlockSprite_glass.png"
     },
     {
         "chineseName": "独石柱",
+        "aliasID": "zhwiki:1f",
         "type": "生成结构",
         "srcName": "EnvSprite_chunk.png"
     },
     {
         "chineseName": "玩家",
+        "aliasID": "zhwiki:1g",
         "type": "生物",
         "srcName": "EntitySprite_bearded-steve.png"
     },
     {
         "chineseName": "悦灵",
+        "aliasID": "zhwiki:1h",
         "type": "生物",
         "srcName": "EntitySprite_allay.png"
     },
     {
         "chineseName": "盔甲架",
+        "aliasID": "zhwiki:1i",
         "type": "生物",
         "srcName": "EntitySprite_armor-stand.png"
     },
     {
         "chineseName": "犰狳",
+        "aliasID": "zhwiki:1j",
         "type": "生物",
         "srcName": "EntitySprite_armadillo.png"
     },
     {
         "chineseName": "蝙蝠",
+        "aliasID": "zhwiki:1k",
         "type": "生物",
         "srcName": "EntitySprite_bat.png"
     },
     {
         "chineseName": "骆驼",
+        "aliasID": "zhwiki:1l",
         "type": "生物",
         "srcName": "EntitySprite_camel.png"
     },
     {
         "chineseName": "骆驼尸壳",
+        "aliasID": "zhwiki:1m",
         "type": "生物",
         "srcName": "EntitySprite_camel-husk.png"
     },
     {
         "chineseName": "鸡",
+        "aliasID": "zhwiki:1n",
         "type": "生物",
         "srcName": "EntitySprite_chicken.png"
     },
     {
         "chineseName": "鳕鱼",
+        "aliasID": "zhwiki:1o",
         "type": "生物",
         "srcName": "EntitySprite_cod.png"
     },
     {
         "chineseName": "铜傀儡",
+        "aliasID": "zhwiki:1p",
         "type": "生物",
         "srcName": "EntitySprite_copper-golem.png"
     },
     {
         "chineseName": "牛",
+        "aliasID": "zhwiki:1q",
         "type": "生物",
         "srcName": "EntitySprite_cow.png"
     },
     {
         "chineseName": "驴",
+        "aliasID": "zhwiki:1r",
         "type": "生物",
         "srcName": "EntitySprite_donkey.png"
     },
     {
         "chineseName": "发光鱿鱼",
+        "aliasID": "zhwiki:1s",
         "type": "生物",
         "srcName": "EntitySprite_glow-squid.png"
     },
     {
         "chineseName": "快乐恶魂",
+        "aliasID": "zhwiki:1t",
         "type": "生物",
         "srcName": "EntitySprite_happy-ghast.png"
     },
     {
         "chineseName": "小恶魂",
+        "aliasID": "zhwiki:1u",
         "type": "生物",
         "srcName": "EntitySprite_ghastling.png"
     },
     {
         "chineseName": "马",
+        "aliasID": "zhwiki:1v",
         "type": "生物",
         "srcName": "EntitySprite_creamy-horse.png"
     },
     {
         "chineseName": "哞菇",
+        "aliasID": "zhwiki:1w",
         "type": "生物",
         "srcName": "EntitySprite_mooshroom.png"
     },
     {
         "chineseName": "骡",
+        "aliasID": "zhwiki:1x",
         "type": "生物",
         "srcName": "EntitySprite_mule.png"
     },
     {
         "chineseName": "鹦鹉",
+        "aliasID": "zhwiki:1y",
         "type": "生物",
         "srcName": "EntitySprite_parrot.png"
     },
     {
         "chineseName": "猪",
+        "aliasID": "zhwiki:1z",
         "type": "生物",
         "srcName": "EntitySprite_pig.png"
     },
     {
         "chineseName": "兔子",
+        "aliasID": "zhwiki:20",
         "type": "生物",
         "srcName": "EntitySprite_brown-rabbit.png"
     },
     {
         "chineseName": "鲑鱼",
+        "aliasID": "zhwiki:21",
         "type": "生物",
         "srcName": "EntitySprite_salmon.png"
     },
     {
         "chineseName": "绵羊",
+        "aliasID": "zhwiki:22",
         "type": "生物",
         "srcName": "EntitySprite_white-sheep.png"
     },
     {
         "chineseName": "骷髅马",
+        "aliasID": "zhwiki:23",
         "type": "生物",
         "srcName": "EntitySprite_skeleton-horse.png"
     },
     {
         "chineseName": "嗅探兽",
+        "aliasID": "zhwiki:24",
         "type": "生物",
         "srcName": "EntitySprite_sniffer.png"
     },
     {
         "chineseName": "鱿鱼",
+        "aliasID": "zhwiki:25",
         "type": "生物",
         "srcName": "EntitySprite_squid.png"
     },
     {
         "chineseName": "炽足兽",
+        "aliasID": "zhwiki:26",
         "type": "生物",
         "srcName": "EntitySprite_strider.png"
     },
     {
         "chineseName": "蝌蚪",
+        "aliasID": "zhwiki:27",
         "type": "生物",
         "srcName": "EntitySprite_tadpole.png"
     },
     {
         "chineseName": "热带鱼",
+        "aliasID": "zhwiki:28",
         "type": "生物",
         "srcName": "EntitySprite_tropical-fish.png"
     },
     {
         "chineseName": "海龟",
+        "aliasID": "zhwiki:29",
         "type": "生物",
         "srcName": "EntitySprite_turtle.png"
     },
     {
         "chineseName": "流浪商人",
+        "aliasID": "zhwiki:2A",
         "type": "生物",
         "srcName": "EntitySprite_wandering-trader.png"
     },
     {
         "chineseName": "僵尸马",
+        "aliasID": "zhwiki:2B",
         "type": "生物",
         "srcName": "EntitySprite_zombie-horse.png"
     },
     {
         "chineseName": "山羊",
+        "aliasID": "zhwiki:2C",
         "type": "生物",
         "srcName": "EntitySprite_goat.png"
     },
     {
         "chineseName": "河豚",
+        "aliasID": "zhwiki:2D",
         "type": "生物",
         "srcName": "EntitySprite_pufferfish.png"
     },
     {
         "chineseName": "村民",
+        "aliasID": "zhwiki:2E",
         "type": "生物",
         "srcName": "EntitySprite_leatherworker.png"
     },
     {
         "chineseName": "盔甲匠",
+        "aliasID": "zhwiki:2F",
         "type": "生物",
         "srcName": "EntitySprite_armorer.png"
     },
     {
         "chineseName": "屠夫",
+        "aliasID": "zhwiki:2G",
         "type": "生物",
         "srcName": "EntitySprite_butcher.png"
     },
     {
         "chineseName": "制图师",
+        "aliasID": "zhwiki:2H",
         "type": "生物",
         "srcName": "EntitySprite_cartographer.png"
     },
     {
         "chineseName": "牧师",
+        "aliasID": "zhwiki:2I",
         "type": "生物",
         "srcName": "EntitySprite_cleric.png"
     },
     {
         "chineseName": "农民",
+        "aliasID": "zhwiki:2J",
         "type": "生物",
         "srcName": "EntitySprite_farmer.png"
     },
     {
         "chineseName": "渔夫",
+        "aliasID": "zhwiki:2K",
         "type": "生物",
         "srcName": "EntitySprite_fisherman.png"
     },
     {
         "chineseName": "制箭师",
+        "aliasID": "zhwiki:2L",
         "type": "生物",
         "srcName": "EntitySprite_fletcher.png"
     },
     {
         "chineseName": "皮匠",
+        "aliasID": "zhwiki:2M",
         "type": "生物",
         "srcName": "EntitySprite_leatherworker.png"
     },
     {
         "chineseName": "图书管理员",
+        "aliasID": "zhwiki:2N",
         "type": "生物",
         "srcName": "EntitySprite_librarian.png"
     },
     {
         "chineseName": "石匠",
+        "aliasID": "zhwiki:2O",
         "type": "生物",
         "srcName": "EntitySprite_leatherworker.png"
     },
     {
         "chineseName": "牧羊人",
+        "aliasID": "zhwiki:2P",
         "type": "生物",
         "srcName": "EntitySprite_shepherd.png"
     },
     {
         "chineseName": "工具匠",
+        "aliasID": "zhwiki:2Q",
         "type": "生物",
         "srcName": "EntitySprite_leatherworker.png"
     },
     {
         "chineseName": "武器匠",
+        "aliasID": "zhwiki:2R",
         "type": "生物",
         "srcName": "EntitySprite_villager-jungle-weaponsmith.png"
     },
     {
         "chineseName": "美西螈",
+        "aliasID": "zhwiki:2S",
         "type": "生物",
         "srcName": "EntitySprite_axolotl.png"
     },
     {
         "chineseName": "猫",
+        "aliasID": "zhwiki:2T",
         "type": "生物",
         "srcName": "EntitySprite_cat.png"
     },
     {
         "chineseName": "青蛙",
+        "aliasID": "zhwiki:2U",
         "type": "生物",
         "srcName": "EntitySprite_frog.png"
     },
     {
         "chineseName": "豹猫",
+        "aliasID": "zhwiki:2V",
         "type": "生物",
         "srcName": "EntitySprite_ocelot.png"
     },
     {
         "chineseName": "雪傀儡",
+        "aliasID": "zhwiki:2W",
         "type": "生物",
         "srcName": "EntitySprite_pumpkin-snow-golem.png"
     },
     {
         "chineseName": "蜜蜂",
+        "aliasID": "zhwiki:2X",
         "type": "生物",
         "srcName": "EntitySprite_bee.png"
     },
     {
         "chineseName": "海豚",
+        "aliasID": "zhwiki:2Y",
         "type": "生物",
         "srcName": "EntitySprite_dolphin.png"
     },
     {
         "chineseName": "狐狸",
+        "aliasID": "zhwiki:2Z",
         "type": "生物",
         "srcName": "EntitySprite_fox.png"
     },
     {
         "chineseName": "铁傀儡",
+        "aliasID": "zhwiki:2a",
         "type": "生物",
         "srcName": "EntitySprite_iron-golem.png"
     },
     {
         "chineseName": "羊驼",
+        "aliasID": "zhwiki:2b",
         "type": "生物",
         "srcName": "EntitySprite_creamy-llama.png"
     },
     {
         "chineseName": "鹦鹉螺",
+        "aliasID": "zhwiki:2c",
         "type": "生物",
         "srcName": "EntitySprite_nautilus.png"
     },
     {
         "chineseName": "熊猫",
+        "aliasID": "zhwiki:2d",
         "type": "生物",
         "srcName": "EntitySprite_normal-panda.png"
     },
     {
         "chineseName": "北极熊",
+        "aliasID": "zhwiki:2e",
         "type": "生物",
         "srcName": "EntitySprite_polar-bear.png"
     },
     {
         "chineseName": "行商羊驼",
+        "aliasID": "zhwiki:2f",
         "type": "生物",
         "srcName": "EntitySprite_creamy-trader-llama.png"
     },
     {
         "chineseName": "狼",
+        "aliasID": "zhwiki:2g",
         "type": "生物",
         "srcName": "EntitySprite_pale-wolf.png"
     },
     {
         "chineseName": "僵尸鹦鹉螺",
+        "aliasID": "zhwiki:2h",
         "type": "生物",
         "srcName": "EntitySprite_zombie-nautilus.png"
     },
     {
         "chineseName": "烈焰人",
+        "aliasID": "zhwiki:2i",
         "type": "生物",
         "srcName": "EntitySprite_blaze.png"
     },
     {
         "chineseName": "沼骸",
+        "aliasID": "zhwiki:2j",
         "type": "生物",
         "srcName": "EntitySprite_bogged.png"
     },
     {
         "chineseName": "旋风人",
+        "aliasID": "zhwiki:2k",
         "type": "生物",
         "srcName": "EntitySprite_breeze.png"
     },
     {
         "chineseName": "苦力怕",
+        "aliasID": "zhwiki:2l",
         "type": "生物",
         "srcName": "EntitySprite_creeper.png"
     },
     {
         "chineseName": "远古守卫者",
+        "aliasID": "zhwiki:2m",
         "type": "生物",
         "srcName": "EntitySprite_elder-guardian.png"
     },
     {
         "chineseName": "末影螨",
+        "aliasID": "zhwiki:2n",
         "type": "生物",
         "srcName": "EntitySprite_endermite.png"
     },
     {
         "chineseName": "唤魔者",
+        "aliasID": "zhwiki:2o",
         "type": "生物",
         "srcName": "EntitySprite_evoker.png"
     },
     {
         "chineseName": "恶魂",
+        "aliasID": "zhwiki:2p",
         "type": "生物",
         "srcName": "EntitySprite_ghast.png"
     },
     {
         "chineseName": "守卫者",
+        "aliasID": "zhwiki:2q",
         "type": "生物",
         "srcName": "EntitySprite_guardian.png"
     },
     {
         "chineseName": "疣猪兽",
+        "aliasID": "zhwiki:2r",
         "type": "生物",
         "srcName": "EntitySprite_hoglin.png"
     },
     {
         "chineseName": "尸壳",
+        "aliasID": "zhwiki:2s",
         "type": "生物",
         "srcName": "EntitySprite_husk.png"
     },
     {
         "chineseName": "岩浆怪",
+        "aliasID": "zhwiki:2t",
         "type": "生物",
         "srcName": "EntitySprite_magma-cube.png"
     },
     {
         "chineseName": "焦骸",
+        "aliasID": "zhwiki:2u",
         "type": "生物",
         "srcName": "EntitySprite_parched.png"
     },
     {
         "chineseName": "幻翼",
+        "aliasID": "zhwiki:2v",
         "type": "生物",
         "srcName": "EntitySprite_phantom.png"
     },
     {
         "chineseName": "猪灵蛮兵",
+        "aliasID": "zhwiki:2w",
         "type": "生物",
         "srcName": "EntitySprite_piglin-brute.png"
     },
     {
         "chineseName": "掠夺者",
+        "aliasID": "zhwiki:2x",
         "type": "生物",
         "srcName": "EntitySprite_evoker.png"
     },
     {
         "chineseName": "劫掠兽",
+        "aliasID": "zhwiki:2y",
         "type": "生物",
         "srcName": "EntitySprite_ravager.png"
     },
     {
         "chineseName": "潜影贝",
+        "aliasID": "zhwiki:2z",
         "type": "生物",
         "srcName": "EntitySprite_shulker.png"
     },
     {
         "chineseName": "蠹虫",
+        "aliasID": "zhwiki:30",
         "type": "生物",
         "srcName": "EntitySprite_silverfish.png"
     },
     {
         "chineseName": "骷髅",
+        "aliasID": "zhwiki:31",
         "type": "生物",
         "srcName": "EntitySprite_skeleton.png"
     },
     {
         "chineseName": "史莱姆",
+        "aliasID": "zhwiki:32",
         "type": "生物",
         "srcName": "EntitySprite_slime.png"
     },
     {
         "chineseName": "流浪者",
+        "aliasID": "zhwiki:33",
         "type": "生物",
         "srcName": "EntitySprite_stray.png"
     },
     {
         "chineseName": "恼鬼",
+        "aliasID": "zhwiki:34",
         "type": "生物",
         "srcName": "EntitySprite_vex.png"
     },
     {
         "chineseName": "卫道士",
+        "aliasID": "zhwiki:35",
         "type": "生物",
         "srcName": "EntitySprite_johnny.png"
     },
     {
         "chineseName": "监守者",
+        "aliasID": "zhwiki:36",
         "type": "生物",
         "srcName": "EntitySprite_warden.png"
     },
     {
         "chineseName": "女巫",
+        "aliasID": "zhwiki:37",
         "type": "生物",
         "srcName": "EntitySprite_witch.png"
     },
     {
         "chineseName": "凋灵骷髅",
+        "aliasID": "zhwiki:38",
         "type": "生物",
         "srcName": "EntitySprite_wither-skeleton.png"
     },
     {
         "chineseName": "僵尸疣猪兽",
+        "aliasID": "zhwiki:39",
         "type": "生物",
         "srcName": "EntitySprite_zoglin.png"
     },
     {
         "chineseName": "僵尸村民",
+        "aliasID": "zhwiki:3A",
         "type": "生物",
         "srcName": "EntitySprite_zombie-villager.png"
     },
     {
         "chineseName": "僵尸",
+        "aliasID": "zhwiki:3B",
         "type": "生物",
         "srcName": "EntitySprite_giant.png"
     },
     {
         "chineseName": "洞穴蜘蛛",
+        "aliasID": "zhwiki:3C",
         "type": "生物",
         "srcName": "EntitySprite_cave-spider.png"
     },
     {
         "chineseName": "嘎枝",
+        "aliasID": "zhwiki:3D",
         "type": "生物",
         "srcName": "EntitySprite_creaking.png"
     },
     {
         "chineseName": "溺尸",
+        "aliasID": "zhwiki:3E",
         "type": "生物",
         "srcName": "EntitySprite_drowned.png"
     },
     {
         "chineseName": "末影人",
+        "aliasID": "zhwiki:3F",
         "type": "生物",
         "srcName": "EntitySprite_enderman.png"
     },
     {
         "chineseName": "猪灵",
+        "aliasID": "zhwiki:3G",
         "type": "生物",
         "srcName": "EntitySprite_piglin.png"
     },
     {
         "chineseName": "蜘蛛",
+        "aliasID": "zhwiki:3H",
         "type": "生物",
         "srcName": "EntitySprite_spider.png"
     },
     {
         "chineseName": "僵尸猪灵",
+        "aliasID": "zhwiki:3I",
         "type": "生物",
         "srcName": "EntitySprite_zombified-piglin.png"
     },
     {
         "chineseName": "末影龙",
+        "aliasID": "zhwiki:3J",
         "type": "生物",
         "srcName": "EntitySprite_ender-dragon.png"
     },
     {
         "chineseName": "凋灵",
+        "aliasID": "zhwiki:3K",
         "type": "生物",
         "srcName": "EntitySprite_wither.png"
     },
     {
         "chineseName": "巨人",
+        "aliasID": "zhwiki:3L",
         "type": "生物",
         "srcName": "EntitySprite_giant.png"
     },
     {
         "chineseName": "幻术师",
+        "aliasID": "zhwiki:3M",
         "type": "生物",
         "srcName": "EntitySprite_illusioner.png"
     },
     {
         "chineseName": "玩家模型",
+        "aliasID": "zhwiki:3N",
         "type": "生物",
         "srcName": "EntitySprite_alex.png"
     },
     {
         "chineseName": "智能体",
+        "aliasID": "zhwiki:3O",
         "type": "生物",
         "srcName": "EntitySprite_agent.png"
     },
     {
         "chineseName": "摄像机",
+        "aliasID": "zhwiki:3P",
         "type": "生物",
         "srcName": "BlockSprite_camera.png"
     },
     {
         "chineseName": "远古守卫者幽灵",
+        "aliasID": "zhwiki:3Q",
         "type": "生物",
         "srcName": "EntitySprite_elder-guardian.png"
     },
     {
         "chineseName": "NPC",
+        "aliasID": "zhwiki:3R",
         "type": "生物",
         "srcName": "EntitySprite_npc.png"
     },
     {
         "chineseName": "海洋",
+        "aliasID": "zhwiki:3S",
         "type": "生物群系",
         "srcName": "BiomeSprite_ocean.png"
     },
     {
         "chineseName": "深海",
+        "aliasID": "zhwiki:3T",
         "type": "生物群系",
         "srcName": "BiomeSprite_deep-ocean.png"
     },
     {
         "chineseName": "暖水海洋",
+        "aliasID": "zhwiki:3U",
         "type": "生物群系",
         "srcName": "BiomeSprite_warm-ocean.png"
     },
     {
         "chineseName": "温水海洋",
+        "aliasID": "zhwiki:3V",
         "type": "生物群系",
         "srcName": "BiomeSprite_lukewarm-ocean.png"
     },
     {
         "chineseName": "温水深海",
+        "aliasID": "zhwiki:3W",
         "type": "生物群系",
         "srcName": "BiomeSprite_deep-lukewarm-ocean.png"
     },
     {
         "chineseName": "冷水海洋",
+        "aliasID": "zhwiki:3X",
         "type": "生物群系",
         "srcName": "BiomeSprite_cold-ocean.png"
     },
     {
         "chineseName": "冷水深海",
+        "aliasID": "zhwiki:3Y",
         "type": "生物群系",
         "srcName": "BiomeSprite_deep-cold-ocean.png"
     },
     {
         "chineseName": "冻洋",
+        "aliasID": "zhwiki:3Z",
         "type": "生物群系",
         "srcName": "BiomeSprite_frozen-ocean.png"
     },
     {
         "chineseName": "冰冻深海",
+        "aliasID": "zhwiki:3a",
         "type": "生物群系",
         "srcName": "BiomeSprite_deep-frozen-ocean.png"
     },
     {
         "chineseName": "蘑菇岛",
+        "aliasID": "zhwiki:3b",
         "type": "生物群系",
         "srcName": "BiomeSprite_mushroom-fields.png"
     },
     {
         "chineseName": "风袭丘陵",
+        "aliasID": "zhwiki:3c",
         "type": "生物群系",
         "srcName": "BiomeSprite_windswept-hills.png"
     },
     {
         "chineseName": "风袭沙砾丘陵",
+        "aliasID": "zhwiki:3d",
         "type": "生物群系",
         "srcName": "BiomeSprite_windswept-gravelly-hills.png"
     },
     {
         "chineseName": "风袭森林",
+        "aliasID": "zhwiki:3e",
         "type": "生物群系",
         "srcName": "BiomeSprite_windswept-forest.png"
     },
     {
         "chineseName": "草甸",
+        "aliasID": "zhwiki:3f",
         "type": "生物群系",
         "srcName": "BiomeSprite_meadow.png"
     },
     {
         "chineseName": "樱花树林",
+        "aliasID": "zhwiki:3g",
         "type": "生物群系",
         "srcName": "BiomeSprite_cherry-grove.png"
     },
     {
         "chineseName": "雪林",
+        "aliasID": "zhwiki:3h",
         "type": "生物群系",
         "srcName": "BiomeSprite_grove.png"
     },
     {
         "chineseName": "积雪山坡",
+        "aliasID": "zhwiki:3i",
         "type": "生物群系",
         "srcName": "BiomeSprite_snowy-slopes.png"
     },
     {
         "chineseName": "冰封山峰",
+        "aliasID": "zhwiki:3j",
         "type": "生物群系",
         "srcName": "BiomeSprite_frozen-peaks.png"
     },
     {
         "chineseName": "尖峭山峰",
+        "aliasID": "zhwiki:3k",
         "type": "生物群系",
         "srcName": "BiomeSprite_jagged-peaks.png"
     },
     {
         "chineseName": "裸岩山峰",
+        "aliasID": "zhwiki:3l",
         "type": "生物群系",
         "srcName": "BiomeSprite_stony-peaks.png"
     },
     {
         "chineseName": "森林",
+        "aliasID": "zhwiki:3m",
         "type": "生物群系",
         "srcName": "BiomeSprite_forest.png"
     },
     {
         "chineseName": "繁花森林",
+        "aliasID": "zhwiki:3n",
         "type": "生物群系",
         "srcName": "BiomeSprite_flower-forest.png"
     },
     {
         "chineseName": "桦木森林",
+        "aliasID": "zhwiki:3o",
         "type": "生物群系",
         "srcName": "BiomeSprite_birch-forest.png"
     },
     {
         "chineseName": "原始桦木森林",
+        "aliasID": "zhwiki:3p",
         "type": "生物群系",
         "srcName": "BiomeSprite_old-growth-birch-forest.png"
     },
     {
         "chineseName": "黑森林",
+        "aliasID": "zhwiki:3q",
         "type": "生物群系",
         "srcName": "BiomeSprite_dark-forest.png"
     },
     {
         "chineseName": "苍白之园",
+        "aliasID": "zhwiki:3r",
         "type": "生物群系",
         "srcName": "BiomeSprite_pale-garden.png"
     },
     {
         "chineseName": "丛林",
+        "aliasID": "zhwiki:3s",
         "type": "生物群系",
         "srcName": "BiomeSprite_jungle.png"
     },
     {
         "chineseName": "竹林",
+        "aliasID": "zhwiki:3t",
         "type": "生物群系",
         "srcName": "BiomeSprite_bamboo-jungle.png"
     },
     {
         "chineseName": "稀疏丛林",
+        "aliasID": "zhwiki:3u",
         "type": "生物群系",
         "srcName": "BiomeSprite_sparse-jungle.png"
     },
     {
         "chineseName": "针叶林",
+        "aliasID": "zhwiki:3v",
         "type": "生物群系",
         "srcName": "BiomeSprite_taiga.png"
     },
     {
         "chineseName": "积雪针叶林",
+        "aliasID": "zhwiki:3w",
         "type": "生物群系",
         "srcName": "BiomeSprite_snowy-taiga.png"
     },
     {
         "chineseName": "原始松木针叶林",
+        "aliasID": "zhwiki:3x",
         "type": "生物群系",
         "srcName": "BiomeSprite_old-growth-pine-taiga.png"
     },
     {
         "chineseName": "原始云杉针叶林",
+        "aliasID": "zhwiki:3y",
         "type": "生物群系",
         "srcName": "BiomeSprite_old-growth-spruce-taiga.png"
     },
     {
         "chineseName": "沼泽",
+        "aliasID": "zhwiki:3z",
         "type": "生物群系",
         "srcName": "BiomeSprite_swamp.png"
     },
     {
         "chineseName": "红树林沼泽",
+        "aliasID": "zhwiki:40",
         "type": "生物群系",
         "srcName": "BiomeSprite_mangrove-swamp.png"
     },
     {
         "chineseName": "河流",
+        "aliasID": "zhwiki:41",
         "type": "生物群系",
         "srcName": "BiomeSprite_river.png"
     },
     {
         "chineseName": "冻河",
+        "aliasID": "zhwiki:42",
         "type": "生物群系",
         "srcName": "BiomeSprite_frozen-river.png"
     },
     {
         "chineseName": "沙滩",
+        "aliasID": "zhwiki:43",
         "type": "生物群系",
         "srcName": "BiomeSprite_beach.png"
     },
     {
         "chineseName": "积雪沙滩",
+        "aliasID": "zhwiki:44",
         "type": "生物群系",
         "srcName": "BiomeSprite_snowy-beach.png"
     },
     {
         "chineseName": "石岸",
+        "aliasID": "zhwiki:45",
         "type": "生物群系",
         "srcName": "BiomeSprite_stony-shore.png"
     },
     {
         "chineseName": "平原",
+        "aliasID": "zhwiki:46",
         "type": "生物群系",
         "srcName": "BiomeSprite_plains.png"
     },
     {
         "chineseName": "向日葵平原",
+        "aliasID": "zhwiki:47",
         "type": "生物群系",
         "srcName": "BiomeSprite_sunflower-plains.png"
     },
     {
         "chineseName": "雪原",
+        "aliasID": "zhwiki:48",
         "type": "生物群系",
         "srcName": "BiomeSprite_snowy-plains.png"
     },
     {
         "chineseName": "冰刺之地",
+        "aliasID": "zhwiki:49",
         "type": "生物群系",
         "srcName": "BiomeSprite_ice-spikes.png"
     },
     {
         "chineseName": "恶地",
+        "aliasID": "zhwiki:4A",
         "type": "生物群系",
         "srcName": "BiomeSprite_badlands.png"
     },
     {
         "chineseName": "风蚀恶地",
+        "aliasID": "zhwiki:4B",
         "type": "生物群系",
         "srcName": "BiomeSprite_eroded-badlands.png"
     },
     {
         "chineseName": "疏林恶地",
+        "aliasID": "zhwiki:4C",
         "type": "生物群系",
         "srcName": "BiomeSprite_wooded-badlands.png"
     },
     {
         "chineseName": "沙漠",
+        "aliasID": "zhwiki:4D",
         "type": "生物群系",
         "srcName": "BiomeSprite_desert.png"
     },
     {
         "chineseName": "热带草原",
+        "aliasID": "zhwiki:4E",
         "type": "生物群系",
         "srcName": "BiomeSprite_savanna.png"
     },
     {
         "chineseName": "热带高原",
+        "aliasID": "zhwiki:4F",
         "type": "生物群系",
         "srcName": "BiomeSprite_savanna-plateau.png"
     },
     {
         "chineseName": "风袭热带草原",
+        "aliasID": "zhwiki:4G",
         "type": "生物群系",
         "srcName": "BiomeSprite_windswept-savanna.png"
     },
     {
         "chineseName": "深暗之域",
+        "aliasID": "zhwiki:4H",
         "type": "生物群系",
         "srcName": "BiomeSprite_deep-dark.png"
     },
     {
         "chineseName": "溶洞",
+        "aliasID": "zhwiki:4I",
         "type": "生物群系",
         "srcName": "BiomeSprite_dripstone-caves.png"
     },
     {
         "chineseName": "繁茂洞穴",
+        "aliasID": "zhwiki:4J",
         "type": "生物群系",
         "srcName": "BiomeSprite_lush-caves.png"
     },
     {
         "chineseName": "绯红森林",
+        "aliasID": "zhwiki:4K",
         "type": "生物群系",
         "srcName": "BiomeSprite_crimson-forest.png"
     },
     {
         "chineseName": "下界荒地",
+        "aliasID": "zhwiki:4L",
         "type": "生物群系",
         "srcName": "BiomeSprite_nether-wastes.png"
     },
     {
         "chineseName": "灵魂沙峡谷",
+        "aliasID": "zhwiki:4M",
         "type": "生物群系",
         "srcName": "BiomeSprite_soul-sand-valley.png"
     },
     {
         "chineseName": "诡异森林",
+        "aliasID": "zhwiki:4N",
         "type": "生物群系",
         "srcName": "BiomeSprite_warped-forest.png"
     },
     {
         "chineseName": "玄武岩三角洲",
+        "aliasID": "zhwiki:4O",
         "type": "生物群系",
         "srcName": "BiomeSprite_basalt-deltas.png"
     },
     {
         "chineseName": "末地",
+        "aliasID": "zhwiki:4P",
         "type": "生物群系",
         "srcName": "BiomeSprite_the-end.png"
     },
     {
         "chineseName": "末地荒地",
+        "aliasID": "zhwiki:4Q",
         "type": "生物群系",
         "srcName": "BiomeSprite_end-barrens.png"
     },
     {
         "chineseName": "末地高地",
+        "aliasID": "zhwiki:4R",
         "type": "生物群系",
         "srcName": "BiomeSprite_end-highlands.png"
     },
     {
         "chineseName": "末地内陆",
+        "aliasID": "zhwiki:4S",
         "type": "生物群系",
         "srcName": "BiomeSprite_end-midlands.png"
     },
     {
         "chineseName": "末地小型岛屿",
+        "aliasID": "zhwiki:4T",
         "type": "生物群系",
         "srcName": "BiomeSprite_small-end-islands.png"
     },
     {
         "chineseName": "末地",
+        "aliasID": "zhwiki:4U",
         "type": "生物群系",
         "srcName": "BiomeSprite_the-end.png"
     },
     {
         "chineseName": "虚空",
+        "aliasID": "zhwiki:4V",
         "type": "生物群系",
         "srcName": "BiomeSprite_the-void.png"
     },
     {
         "chineseName": "恶地高原",
+        "aliasID": "zhwiki:4W",
         "type": "生物群系",
         "srcName": "BiomeSprite_badlands-plateau.png"
     },
     {
         "chineseName": "竹林丘陵",
+        "aliasID": "zhwiki:4X",
         "type": "生物群系",
         "srcName": "BiomeSprite_bamboo-jungle-hills.png"
     },
     {
         "chineseName": "桦木森林丘陵",
+        "aliasID": "zhwiki:4Y",
         "type": "生物群系",
         "srcName": "BiomeSprite_birch-forest-hills.png"
     },
     {
         "chineseName": "黑森林丘陵",
+        "aliasID": "zhwiki:4Z",
         "type": "生物群系",
         "srcName": "BiomeSprite_dark-forest-hills.png"
     },
     {
         "chineseName": "暖水深海",
+        "aliasID": "zhwiki:4a",
         "type": "生物群系",
         "srcName": "BiomeSprite_deep-warm-ocean.png"
     },
     {
         "chineseName": "沙漠丘陵",
+        "aliasID": "zhwiki:4b",
         "type": "生物群系",
         "srcName": "BiomeSprite_desert-hills.png"
     },
     {
         "chineseName": "沙漠湖泊",
+        "aliasID": "zhwiki:4c",
         "type": "生物群系",
         "srcName": "BiomeSprite_desert-lakes.png"
     },
     {
         "chineseName": "巨型云杉针叶林丘陵",
+        "aliasID": "zhwiki:4d",
         "type": "生物群系",
         "srcName": "BiomeSprite_old-growth-spruce-taiga.png"
     },
     {
         "chineseName": "巨型针叶林丘陵",
+        "aliasID": "zhwiki:4e",
         "type": "生物群系",
         "srcName": "BiomeSprite_giant-tree-taiga-hills.png"
     },
     {
         "chineseName": "丛林丘陵",
+        "aliasID": "zhwiki:4f",
         "type": "生物群系",
         "srcName": "BiomeSprite_jungle-hills.png"
     },
     {
         "chineseName": "冻洋（旧版）",
+        "aliasID": "zhwiki:4g",
         "type": "生物群系",
         "srcName": "BiomeSprite_legacy-frozen-ocean.png"
     },
     {
         "chineseName": "恶地高原变种",
+        "aliasID": "zhwiki:4h",
         "type": "生物群系",
         "srcName": "BiomeSprite_modified-badlands-plateau.png"
     },
     {
         "chineseName": "沙砾山地+",
+        "aliasID": "zhwiki:4i",
         "type": "生物群系",
         "srcName": "BiomeSprite_modified-gravelly-mountains.png"
     },
     {
         "chineseName": "丛林边缘变种",
+        "aliasID": "zhwiki:4j",
         "type": "生物群系",
         "srcName": "BiomeSprite_modified-jungle-edge.png"
     },
     {
         "chineseName": "丛林变种",
+        "aliasID": "zhwiki:4k",
         "type": "生物群系",
         "srcName": "BiomeSprite_jungle-hills.png"
     },
     {
         "chineseName": "繁茂的恶地高原变种",
+        "aliasID": "zhwiki:4l",
         "type": "生物群系",
         "srcName": "BiomeSprite_modified-wooded-badlands-plateau.png"
     },
     {
         "chineseName": "山地边缘",
+        "aliasID": "zhwiki:4m",
         "type": "生物群系",
         "srcName": "BiomeSprite_mountain-edge.png"
     },
     {
         "chineseName": "蘑菇岛岸",
+        "aliasID": "zhwiki:4n",
         "type": "生物群系",
         "srcName": "BiomeSprite_mushroom-field-shore.png"
     },
     {
         "chineseName": "破碎的热带高原",
+        "aliasID": "zhwiki:4o",
         "type": "生物群系",
         "srcName": "BiomeSprite_shattered-savanna-plateau.png"
     },
     {
         "chineseName": "雪山",
+        "aliasID": "zhwiki:4p",
         "type": "生物群系",
         "srcName": "BiomeSprite_snowy-mountains.png"
     },
     {
         "chineseName": "积雪的针叶林丘陵",
+        "aliasID": "zhwiki:4q",
         "type": "生物群系",
         "srcName": "BiomeSprite_snowy-taiga-hills.png"
     },
     {
         "chineseName": "积雪的针叶林山地",
+        "aliasID": "zhwiki:4r",
         "type": "生物群系",
         "srcName": "BiomeSprite_snowy-taiga-hills.png"
     },
     {
         "chineseName": "沼泽丘陵",
+        "aliasID": "zhwiki:4s",
         "type": "生物群系",
         "srcName": "BiomeSprite_swamp-hills.png"
     },
     {
         "chineseName": "针叶林丘陵",
+        "aliasID": "zhwiki:4t",
         "type": "生物群系",
         "srcName": "BiomeSprite_taiga-hills.png"
     },
     {
         "chineseName": "针叶林山地",
+        "aliasID": "zhwiki:4u",
         "type": "生物群系",
         "srcName": "BiomeSprite_taiga-hills.png"
     },
     {
         "chineseName": "高大桦木丘陵",
+        "aliasID": "zhwiki:4v",
         "type": "生物群系",
         "srcName": "BiomeSprite_tall-birch-hills.png"
     },
     {
         "chineseName": "繁茂的丘陵",
+        "aliasID": "zhwiki:4w",
         "type": "生物群系",
         "srcName": "BiomeSprite_wooded-hills.png"
     },
     {
         "chineseName": "冰原沙漠",
+        "aliasID": "zhwiki:4x",
         "type": "生物群系",
         "srcName": "BiomeSprite_ice-desert.png"
     },
     {
         "chineseName": "雨林",
+        "aliasID": "zhwiki:4y",
         "type": "生物群系",
         "srcName": "BiomeSprite_rain-forest.png"
     },
     {
         "chineseName": "季节性森林",
+        "aliasID": "zhwiki:4z",
         "type": "生物群系",
         "srcName": "BiomeSprite_seasonal-forest.png"
     },
     {
         "chineseName": "灌木丛地",
+        "aliasID": "zhwiki:50",
         "type": "生物群系",
         "srcName": "BiomeSprite_shrubland.png"
     },
     {
         "chineseName": "冻原",
+        "aliasID": "zhwiki:51",
         "type": "生物群系",
         "srcName": "BiomeSprite_tundra.png"
     },
     {
         "chineseName": "天域",
+        "aliasID": "zhwiki:52",
         "type": "生物群系",
         "srcName": "BiomeSprite_sky.png"
     }
