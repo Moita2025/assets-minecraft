@@ -2,23 +2,33 @@ import json
 
 from configs import ID_JSON_FILE
 
-def get_id_dict():
-    # 读取 ID 映射表
+
+def get_english_to_alias_dict():
+    """
+    从 ID_JSON_FILE 构建 englishId -> aliasID 的映射。
+
+    每个条目使用 idDetails[-1]（即当前版本的实际 ID）作为 key，
+    aliasID 作为 value。缺少 idDetails 或 aliasID 的条目会被跳过。
+    """
     with open(ID_JSON_FILE, "r", encoding="utf-8") as f:
         id_data = json.load(f)
 
-    # 构建 englishId -> 中文 的映射
-    en_to_zh = {}
+    en_to_alias = {}
 
     for item in id_data:
-        if "idDetails" not in item or not item["idDetails"]:
+        id_details = item.get("idDetails")
+        if not id_details:
             continue
 
-        last = item["idDetails"][-1]
+        last = id_details[-1]
+        if not isinstance(last, dict):
+            continue
 
-        if "englishId" in last:
-            en = last["englishId"]
-            zh = item.get("chineseName", en)  # fallback
-            en_to_zh[en] = zh
+        english_id = last.get("englishId")
+        alias = item.get("aliasID")
+        if english_id is None or alias is None:
+            continue
 
-    return en_to_zh
+        en_to_alias[english_id] = alias
+
+    return en_to_alias

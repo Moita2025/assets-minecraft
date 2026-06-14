@@ -180,7 +180,7 @@ def parse_crafting_shaped_recipe(recipe, tags_list_dict):
             {
                 "type": "minecraft:crafting_shaped",
                 "hasTag": False,
-                "input_items": list(set(map(str, input_items))),
+                "input_items": sorted(set(map(str, input_items))),
                 "input_tags": [],
                 "output_item": result.get("id"),
                 "output_count": result.get("count", 1),
@@ -221,7 +221,7 @@ def parse_crafting_shapeless_recipe(recipe, tags_list_dict):
             {
                 "type": "minecraft:crafting_shapeless",
                 "hasTag": False,
-                "input_items": list(set(map(str, items))),
+                "input_items": sorted(set(map(str, items))),
                 "input_tags": [],
                 "output_item": result.get("id"),
                 "output_count": result.get("count", 1),
