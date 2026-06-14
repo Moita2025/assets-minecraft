@@ -14,11 +14,11 @@ def main():
     # 当前脚本所在目录
     current_dir = Path(__file__).parent.resolve()
     
-    # 用于存储最终结果：[{ "path": "相对路径", "keys": ["name1", "name2", ...] }]
+    # 用于存储最终结果：[{ "path": "相对路径", "keys": ["aliasID1", "aliasID2", ...] }]
     all_configs = []
     
-    # 用于收集所有 chineseName，避免重复（可选，如果你不希望去重可以注释掉）
-    seen_names = set()
+    # 用于收集所有 aliasID，避免重复（可选，如果你不希望去重可以注释掉）
+    seen_aliases = set()
     
     # 遍历当前目录及其所有子目录
     for root, dirs, files in os.walk(current_dir):
@@ -27,7 +27,7 @@ def main():
             
             # 计算相对于当前目录的路径
             relative_path = config_path.relative_to(current_dir).as_posix()
-            seen_names = set()
+            seen_aliases = set()
             
             try:
                 with open(config_path, 'r', encoding='utf-8') as f:
@@ -38,22 +38,22 @@ def main():
                     print(f"警告: {relative_path} 不是一个 JSON 数组，已跳过")
                     continue
                 
-                chinese_names = []
+                alias_ids = []
                 for item in data:
-                    if isinstance(item, dict) and 'chineseName' in item:
-                        name = item['chineseName']
-                        if name not in seen_names:  # 可选：去重
-                            chinese_names.append(name)
-                            seen_names.add(name)
-                    # 如果你希望即使重复也保留，可以直接 append，不检查 seen_names
+                    if isinstance(item, dict) and 'aliasID' in item:
+                        alias = item['aliasID']
+                        if alias not in seen_aliases:  # 可选：去重
+                            alias_ids.append(alias)
+                            seen_aliases.add(alias)
+                    # 如果你希望即使重复也保留，可以直接 append，不检查 seen_aliases
                 
-                if chinese_names:  # 只有收集到名字才添加
+                if alias_ids:  # 只有收集到 aliasID 才添加
                     all_configs.append({
                         "path": relative_path,
-                        "keys": chinese_names
+                        "keys": alias_ids
                     })
                 
-                print(f"已处理: {relative_path}，提取 {len(chinese_names)} 个 chineseName")
+                print(f"已处理: {relative_path}，提取 {len(alias_ids)} 个 aliasID")
                 
             except json.JSONDecodeError as e:
                 print(f"错误: {relative_path} JSON 格式错误 - {e}")
