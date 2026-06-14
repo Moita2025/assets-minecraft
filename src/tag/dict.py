@@ -1,14 +1,18 @@
+"""
+读取 vanilla tag 目录，递归解析嵌套 tag 引用，得到 `tag_name -> [item_ids]` 的字典。
+
+不再生成独立的 tags.json；这个模块只负责构建解析后的字典，
+反向写入 config.json 的逻辑见 src/tag/embed.py。
+"""
 import json
 from pathlib import Path
 
 from configs import (
     TAGS_INPUT_DIRECTORIES,
-    ID_JSON_FILE,
-    TAG_JSON_FILE,
     DEFAULT_NAMESPACE,
 )
-from tag.refs import normalize_tag_ref, to_tag_ref
-from id.base import get_id_dict
+from tag.refs import normalize_tag_ref
+
 
 def load_all_tags():
     base_paths = [Path(p) for p in TAGS_INPUT_DIRECTORIES]
@@ -44,22 +48,19 @@ def get_namespaced_tag_name(base_path, file_path):
     return f"{namespace}:{relative_stem}"
 
 
-def resolve_tag(tag, tag_map, cache, visiting, path=None, output = False):
-    
+def resolve_tag(tag, tag_map, cache, visiting, path=None, output=False):
     if path is None:
         path = []
 
-    if (output):
+    if output:
         print(f"Resolving: {' -> '.join(path + [tag])}")
-    
-    # 已缓存
+
     if tag in cache:
         return cache[tag]
 
-    # 检测循环引用
     if tag in visiting:
         cycle_path = " -> ".join(path + [tag])
-        raise ValueError(f"检测到循环引用: {tag}")
+        raise ValueError(f"检测到循环引用: {cycle_path}")
 
     visiting.add(tag)
     path.append(tag)
@@ -76,90 +77,27 @@ def resolve_tag(tag, tag_map, cache, visiting, path=None, output = False):
     path.pop()
     visiting.remove(tag)
 
-    # 去重（可选）
+    # 去重，保留首次出现顺序
     result = list(dict.fromkeys(result))
 
     cache[tag] = result
     return result
 
-def get_tags_list_dict(output = False):
+
+def get_tags_list_dict(output=False):
     tag_map = load_all_tags()
 
     resolved = {}
     cache = {}
 
     for tag in tag_map:
-        resolved[tag] = resolve_tag(tag, tag_map, cache, set(), output = output)
+        resolved[tag] = resolve_tag(tag, tag_map, cache, set(), output=output)
 
     return resolved
 
-def get_tags_zhn_list_dict(output = True):
-    tags_list_dict = get_tags_list_dict(output)
-
-    en_to_zh = get_id_dict()
-
-    # 转换 tags_list_dict
-    tags_zhn_list_dict = {}
-
-    for tag, values in tags_list_dict.items():
-        new_values = []
-
-        for v in values:
-            # 如果是字符串，直接映射
-            if isinstance(v, str):
-                new_values.append(en_to_zh.get(v, v))
-            else:
-                # 如果是复杂结构，保留原样（也可以改成递归）
-                new_values.append(v)
-
-        key_name = to_tag_ref(tag) if not tag.startswith("#") else tag
-
-        tags_zhn_list_dict[key_name] = new_values
-
-    return tags_zhn_list_dict
-
-def format_list(lst, indent=4):
-    # 少于5个：一行
-    if len(lst) < 5:
-        return json.dumps(lst, ensure_ascii=False)
-    
-    # >=5个：多行，每10个一行
-    lines = []
-    for i in range(0, len(lst), 10):
-        chunk = lst[i:i+10]
-        line = ', '.join(json.dumps(x, ensure_ascii=False) for x in chunk)
-        lines.append(' ' * indent + line)
-    
-    return '[\n' + ',\n'.join(lines) + '\n]'
-
-def save_result(result, path):
-    with open(path, 'w', encoding='utf-8') as f:
-        f.write('{\n')
-        
-        items = list(result.items())
-        for idx, (key, value) in enumerate(items):
-            f.write(f'    {json.dumps(key, ensure_ascii=False)}: ')
-            f.write(format_list(value, indent=8))
-            
-            if idx != len(items) - 1:
-                f.write(',')
-            f.write('\n')
-        
-        f.write('}\n')
-
-def get_tag_dict(output = False):
-    result = get_tags_zhn_list_dict(output = output)
-
-    pretty_json = json.dumps(
-        result,
-        indent=4,                
-        ensure_ascii=False,      
-    )
-    if (output): print(pretty_json)
-
-    save_result(result, TAG_JSON_FILE)
-
 
 if __name__ == "__main__":
-
-    get_tag_dict()
+    d = get_tags_list_dict()
+    print(f"已解析 {len(d)} 个 tag")
+    sample = next(iter(d.items()))
+    print(f"示例: {sample[0]} -> {sample[1][:5]}{' ...' if len(sample[1]) > 5 else ''}")

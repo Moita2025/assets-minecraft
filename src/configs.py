@@ -8,7 +8,6 @@ ANALYSIS_PATH = ""
 MERGED_JSON_FILE = f"{ANALYSIS_PATH}/recipes_original.json"
 ID_JSON_FILE = f"{ANALYSIS_PATH}/config.json"
 FINAL_JSON_FILE = f"{ANALYSIS_PATH}/recipes.json"
-TAG_JSON_FILE = f"{ANALYSIS_PATH}/tags.json"
 
 # 各 config.json 的 alias 命名空间清单（路径相对仓库根）。
 # 新增模组资源时，往这里追加一条 {"path": ..., "namespace": ...} 即可。
